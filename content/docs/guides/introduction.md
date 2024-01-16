@@ -18,16 +18,6 @@ seo:
   noindex: false # false (default) or true
 ---
 
-
-{{< callout context="note" title="Note" icon="info-circle" >}}
-Doks is a documentation website toolkit built with Hyas. You can get started with this command:
-
-```bash
-npm create hyas@latest -- --template doks
-```
-
-{{< /callout >}}
-
 ## 1.1 Was ist SAP?
 ### Definition
 SAP ist ein **ERP** (**Enterprise Resource Planning**) -Softwaresystem. SAP unterstützt Unternehmen im zentralen Datenmanagement in diversen Unternehmensbereichen, wie Finanzen, Personalwesen, Fertigung, Lieferkette, Services, Beschaffung und mehr. Dabei werden die Unternehmensbereiche miteinander verbunden und zentral gesteuert. Somit bieten sich Möglichkeiten die betrieblichen Prozesse des Unternehmens intelligenter, schneller und effizienter zu gestalten. Neben den bereitgestellten SAP-Standardprogrammen können auch eigenen Programme zur Unterstützung von betrieblichen Prozessen in der SAP-eigenen Programmiersprache ABAP geschrieben werden.
