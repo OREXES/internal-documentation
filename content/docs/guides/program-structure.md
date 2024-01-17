@@ -303,10 +303,9 @@ Die Definition einer Klasse kann entweder lokal in der Workbench oder global erf
 
 Paradigmen der objektorientierten Programmierung
 
-Vererbung:
-
-Mit der Vererbung werden, wie bereits im Begriff enthalten, die Funktionen, Attribute etc. einer bestehenden Klasse an eine neue Klasse weiterzugeben. Diese neue Klasse dient dann als Erweiterungsklasse der ursprünglichen. Manchmal wird der Begriff Superklasse für die vererbende und Subklasse für die erhaltende Klasse verwendet.  
-Zweck dieses Konzeptes ist es, dass keine Redundanz entsteht und die Bestandteile effizient wiederverwendet werden. Ist es notwendig, dass eine Methode anzupassen, kann dies durch eine Redefintion durchgeführt werden.
+- Vererbung:
+  Mit der Vererbung werden, wie bereits im Begriff enthalten, die Funktionen, Attribute etc. einer bestehenden Klasse an eine neue Klasse weiterzugeben. Diese neue Klasse dient dann als Erweiterungsklasse der ursprünglichen. Manchmal wird der Begriff Superklasse für die vererbende und Subklasse für die erhaltende 
+  Klasse verwendet. Zweck dieses Konzeptes ist es, dass keine Redundanz entsteht und die Bestandteile effizient wiederverwendet werden. Ist es notwendig, dass eine Methode anzupassen, kann dies durch eine Redefintion durchgeführt werden.
 
 Erstellung einer lokalen Klasse  
 Die lokale Implementierung findet in der Workbench statt. Um in ABAP eine Klasse zu definieren, muss ein Definitions- und ein Implementierungsteil erstellt werden.  
