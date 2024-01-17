@@ -195,7 +195,7 @@ Beispiel:
 CALL SCREEN <Dynpro-Nummer>.
 ```
 
-**SKIP TO SCREEN** 
+**SKIP TO SCREEN**   
 Der `SKIP TO SCREEN` Befehl dient dazu, die Steuerung an einen anderen Bildschirm zu übergeben, ohne die aktuellen Änderungen zu speichern oder zu verarbeiten. Es handelt sich um einen asynchronen Sprung, bei dem die aktuelle Verarbeitung abgebrochen wird und direkt zum aufgerufenen Bildschirm gesprungen wird, ohne Daten zu übergeben oder zu verarbeiten. Es wird häufig für Navigationen innerhalb von Reports verwendet, ohne eine spezifische Datenverarbeitung durchzuführen.  
 Beispiel: 
 ```abap
