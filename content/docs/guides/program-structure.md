@@ -93,7 +93,9 @@ SELECT matnr, mtart FROM mara INTO TABLE @data(mara_tab) WHERE mtart = 'FERT'.
 
 Orientiere die `WHERE`-Klausel an den Indizes der Datenbanktabelle, um die Abfrage zu beschleunigen.  
 Beispiel:  
-`SELECT * FROM vbak INTO TABLE @data(vbak_tab) WHERE vkorg = @vkorg AND vtweg = @vtweg.`
+```abap
+SELECT * FROM vbak INTO TABLE @data(vbak_tab) WHERE vkorg = @vkorg AND vtweg = @vtweg.
+```
 
 ### Vermeidung von SELECT
 Wähle nur die benötigten Spalten statt `SELECT *`, um die Datenmenge zu minimieren.  
