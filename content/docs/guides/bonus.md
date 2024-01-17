@@ -51,7 +51,6 @@ Transporte sind notwendig, um Entwicklungsprojekte vom Entwicklungssystem auf da
 ### 5.2.2       Transporte
 
 Die Transaktionen SE01 oder SE09 werden als „Transport Organizer“ beschrieben. Mit ihnen können Customizing- und Workbench-Aufträge angelegt werden und liefern die Übersicht über die Aufträge und die Beschreibung der Aufgabe.
-
 Customizing- und Workbench-Aufträge sind verschiedene Typen von Änderungsaufträgen. Mit einem Customizing-Auftrag werden mandantenabhängige Änderungen (z.B. bei Rollen) vorgenommen. Ein Workbench-Auftrag wird hingegen für mandantenunabhängiges Customizing verwendet. Workbench-Aufträge werden für alle Repository-Objekte der ABAP Workbench genutzt. SAP-Systeme können in Mandanten aufgeteilt werden. Kundendaten sind beispielsweise immer mandantenabhängig, da diese eine bestimmte Agilität vorweisen müssen, da z.B. bestimmte Einstellungen nur für gewisse Kunden gelten. Mandantenunabhängiges Customizing beschreibt Einstellungen, die für alle Mandanten im SAP-System gleichermaßen gelten.
 
 <!-- ![Ein Bild, das Text, Screenshot, Diagramm, Schrift enthält. -->
