@@ -99,7 +99,7 @@ Besser: `SELECT matnr, mtart FROM mara INTO TABLE @data(mara_tab) WHERE mtart = 
 
 ### Indizes nutzen
 
-Orientiere die WHERE-Klausel an den Indizes der Datenbanktabelle, um die Abfrage zu beschleunigen.
+Orientiere die `WHERE`-Klausel an den Indizes der Datenbanktabelle, um die Abfrage zu beschleunigen.
 
 Beispiel:
 `SELECT * FROM vbak INTO TABLE @data(vbak_tab) WHERE vkorg = @vkorg AND vtweg = @vtweg.`
@@ -129,7 +129,7 @@ Statt `FOR ALL ENTRIES`, besser `JOIN` oder `WHERE ... IN (SELECT ...)`
 
 ### Aggregatfunktionen nutzen
 
-Nutze Aggregatfunktionen (wie SUM, MAX, MIN) in deinen Abfragen, um Berechnungen auf der Datenbankebene durchzuführen, statt große Datenmengen in ABAP zu laden und dort zu verarbeiten.
+Nutze Aggregatfunktionen (wie `SUM`, `MAX`, `MIN`) in deinen Abfragen, um Berechnungen auf der Datenbankebene durchzuführen, statt große Datenmengen in ABAP zu laden und dort zu verarbeiten.
 
 Beispiel:
 ```abap
@@ -141,7 +141,7 @@ SELECT MAX(netwr) INTO @data(max_netwr) FROM vbrk.
 
 Beispiel:
 
-Statt SELECT DISTINCT, besser die Datenmodellierung prüfen und optimieren.
+Statt `SELECT DISTINCT`, besser die Datenmodellierung prüfen und optimieren.
 
 ### Verwendung von Cursor
 
@@ -268,14 +268,13 @@ IF Bedingung_1.
 
 ENDIF.
 ```
-Der LEAVE PROGRAM Befehl beendet das Programm.
+Der `LEAVE PROGRAM` Befehl beendet das Programm.
 
 ## 2.2 BADI (Lukas evtl. Colin)
 
 Einführung in Business Add-Ins (BADI)
 
-BADIs sind eine Möglichkeit, die Funktion des SAP-Standardcodes an die eigenen bzw. Die Bedürfnisse des Kundens anzupassen. Ein BadI ist ein Quelltext-Plugin und nutzt Objektorientierung und Interfaces zur Implementierung. Hierdurch wird der bereits vorhandene Standardcode nicht verändert.
-
+BADIs sind eine Möglichkeit, die Funktion des SAP-Standardcodes an die eigenen bzw. Die Bedürfnisse des Kundens anzupassen. Ein BadI ist ein Quelltext-Plugin und nutzt Objektorientierung und Interfaces zur Implementierung. Hierdurch wird der bereits vorhandene Standardcode nicht verändert.  
 Ziel der BAdIs ist es eine Geschäftsprozesse und Vorgänge im System an Projekt- und Kundenbedürfnisse anzupassen. Sie ergänzen somit die Enhancements, User-Exits und BAPIs. Unterschiede sind teilweise in Performance und hauptsächlich in der Art und Weise, wie sie angelegt werden. 
 
 Verwendung und Anpassung von BADI in ABAP
@@ -298,24 +297,19 @@ Auswahl eines BaDI und oder Anlage eines Erweiterungsspots.
 
 ## 2.3 Objektorientierte Programmierung (Colin)
 
-In ABAP gibt es die Möglichkeit Anwendung objektorientiert zu entwickeln. Grundlage bieten die Klassen und ihre Methoden. Eine Klasse ist wie die Blaupause der Anwendung zu sehen. Innerhalb der Methoden wird die Funktionalität der Klasse festgelegt. Hierzu kommen noch die Attribute. Diese können als Merkmale der Klasse bzw. Eigenschaften gesehen werden. Sie werden durch Variablen ausgeprägt.
-
-Alle bekannten Paradigmen der Objektorientierung treten auch hier in Kraft, so ist möglich, durch die Verwendung der Kapselung, die Klassen zu schützen und Zugriff zu regeln.
-
+In ABAP gibt es die Möglichkeit Anwendung objektorientiert zu entwickeln. Grundlage bieten die Klassen und ihre Methoden. Eine Klasse ist wie die Blaupause der Anwendung zu sehen. Innerhalb der Methoden wird die Funktionalität der Klasse festgelegt. Hierzu kommen noch die Attribute. Diese können als Merkmale der Klasse bzw. Eigenschaften gesehen werden. Sie werden durch Variablen ausgeprägt.  
+Alle bekannten Paradigmen der Objektorientierung treten auch hier in Kraft, so ist möglich, durch die Verwendung der Kapselung, die Klassen zu schützen und Zugriff zu regeln.  
 Die Definition einer Klasse kann entweder lokal in der Workbench oder global erfolgen. Eine globale Definition hat die Folge, dass die Klasse in beliebig vielen Reports, Funktionsbausteinen, Anwendungen, etc. verwendet werden kann. Während die lokale Definition nur am Ort der Erzeugung vorhanden ist.
 
 Paradigmen der objektorientierten Programmierung
 
 Vererbung:
 
-Mit der Vererbung werden, wie bereits im Begriff enthalten, die Funktionen, Attribute etc. einer bestehenden Klasse an eine neue Klasse weiterzugeben. Diese neue Klasse dient dann als Erweiterungsklasse der ursprünglichen. Manchmal wird der Begriff Superklasse für die vererbende und Subklasse für die erhaltende Klasse verwendet.
-
+Mit der Vererbung werden, wie bereits im Begriff enthalten, die Funktionen, Attribute etc. einer bestehenden Klasse an eine neue Klasse weiterzugeben. Diese neue Klasse dient dann als Erweiterungsklasse der ursprünglichen. Manchmal wird der Begriff Superklasse für die vererbende und Subklasse für die erhaltende Klasse verwendet.  
 Zweck dieses Konzeptes ist es, dass keine Redundanz entsteht und die Bestandteile effizient wiederverwendet werden. Ist es notwendig, dass eine Methode anzupassen, kann dies durch eine Redefintion durchgeführt werden.
 
-Erstellung einer lokalen Klasse
-
-Die lokale Implementierung findet in der Workbench statt. Um in ABAP eine Klasse zu definieren, muss ein Definitions- und ein Implementierungsteil erstellt werden.
-
+Erstellung einer lokalen Klasse  
+Die lokale Implementierung findet in der Workbench statt. Um in ABAP eine Klasse zu definieren, muss ein Definitions- und ein Implementierungsteil erstellt werden.  
 In der Definition werden die Attribute, Methoden, ihre Eigenschaften und Schnittstellen festgelegt. Jedoch keine Ablauflogik, diese wird erst im Implementierungsabschnitt durchgeführt.
 
 Definition
@@ -391,8 +385,7 @@ ENDCLASS.
 ```
 In der Implementierung der Klasse wird nun die Logik festgelegt. Besonders zu beachten ist es, dass der restliche ABAP-Code zwischen Definition und Implementierung geschrieben wird.
 
-Erstellung einer globalen Klasse
-
+Erstellung einer globalen Klasse  
 Die globale Erstellung findet der Transaktion SE24 (Class Builder) statt. Hier kann die Klasse wie eine Tabelle oder Struktur analog der SE11 zum Beispiel definiert werden. Über einen Button kann dann die Workbench geöffnet werden, um die Funktionen mit ABAP zu implementieren.
 
 Definition
@@ -403,16 +396,12 @@ Einstieg in den Class Builder.
 
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image014.png) -->
 
-Hier kann nun über den Eingabebildschirm angegeben werden, was die Klasse alles beinhalten soll. Ähnlich der Anlage einer Struktur oder Datenbank in der SE11.
-
-Static und Instance Methoden unterscheiden sich darin, dass eine Static Methode kein Objekt von der Klasse benötigt, um aufgerufen zu werden.
-
-So muss für eine Instance Methode zuerst ein Objekt der Klasse erzeugt werden.
+Hier kann nun über den Eingabebildschirm angegeben werden, was die Klasse alles beinhalten soll. Ähnlich der Anlage einer Struktur oder Datenbank in der SE11.  
+Static und Instance Methoden unterscheiden sich darin, dass eine Static Methode kein Objekt von der Klasse benötigt, um aufgerufen zu werden. So muss für eine Instance Methode zuerst ein Objekt der Klasse erzeugt werden.
 
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image016.png) -->
 
-Auch die Parameter der Methode werden hier festgelegt. Dies findet alles über die Buttons im Menüband statt.
-
+Auch die Parameter der Methode werden hier festgelegt. Dies findet alles über die Buttons im Menüband statt.  
 Durch Klick auf Quelltext, kann dann die ABAP-Logik eingebaut werden.
 
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image018.png) -->
