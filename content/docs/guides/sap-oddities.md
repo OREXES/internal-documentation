@@ -68,53 +68,53 @@ Nachdem man auf den Sichern-Button klickt, wird der Funktionsbaustein angelegt u
 
 ### Einführung in die Entwicklung von Dynpros und Selection-Screens
 
-Defintion von Dynpros:
+**Defintion von Dynpros**:
 Dynamische Programme (Dynpros) sind ein zentrales Konzept in SAP ABAP und dienen der Erstellung von interaktiven Benutzeroberflächen für SAP-Anwendungen. 
 Dynpros ermöglichen die Gestaltung von Bildschirmen, auf denen Benutzer mit dem SAP-System interagieren können. Diese Bildschirme enthalten verschiedene Elemente wie Eingabefelder, Auswahllisten, 
 Knöpfe und andere Steuerelemente, die dem Benutzer die Eingabe von Daten und die Navigation innerhalb der Anwendung ermöglichen.
 
-Beispiel Dynpro aus den Benutzerantrag:
+**Beispiel Dynpro aus den Benutzerantrag**:
 
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image028.png)          -->
 
-Strukturierte Oberfläche:  
+**Strukturierte Oberfläche**:  
 Dynpros ermöglichen eine logische und strukturierte Darstellung von Informationen, was es Benutzern erleichtert, sich in der Anwendung zurechtzufinden und die gewünschten Aufgaben auszuführen.
 
-Flexibilität und Anpassungsfähigkeit:  
+**Flexibilität und Anpassungsfähigkeit**:  
 Die Flexibilität von Dynpros erlaubt es Entwicklern, Bildschirme nach den spezifischen Anforderungen einer Anwendung zu gestalten. Dies ermöglicht eine hohe Anpassungsfähigkeit und die Berücksichtigung der Bedürfnisse verschiedener Benutzergruppen.
 
-Interaktion und Rückmeldung:  
+**Interaktion und Rückmeldung**:  
 Durch die Interaktion mit Dynpros erhalten Benutzer sofortige Rückmeldungen über ihre Eingaben oder Aktionen, was die Benutzererfahrung verbessert und Fehler minimiert.
 
-Nahtlose Integration mit ABAP-Logik:  
+**Nahtlose Integration mit ABAP-Logik**:  
 Dynpros sind eng mit der ABAP-Logik verbunden, was es ermöglicht, die eingegebenen Daten direkt zu verarbeiten und in den SAP-Systemen zu nutzen.
 
-Was sind Selection-Screens?  
+**Was sind Selection-Screens?**  
 Selection-Screens sind wichtige Werkzeuge in SAP ABAP, die es Benutzern ermöglichen, Eingabeparameter für Programme oder Funktionen festzulegen. Sie bieten eine interaktive Möglichkeit für Benutzer, die Ausführung von ABAP-Programmen zu steuern, indem sie spezifische Kriterien oder Filter festlegen, bevor das Programm ausgeführt wird.
 
-Beispiel Selection-Screen aus den Reader:
+**Beispiel Selection-Screen aus den Reader**:
 
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image030.png) -->
 
-Warum Selection-Screens?  
+**Warum Selection-Screens**?  
 Der Hauptzweck von Selection-Screens besteht darin, Benutzern die Auswahl von Daten für die Verarbeitung durch ABAP-Programme zu ermöglichen. Sie dienen als Filtermechanismus, um relevante Datensätze aus einer großen Datenmenge auszuwählen.
 
-Anpassungsfähigkeit und Flexibilität:  
+**Anpassungsfähigkeit und Flexibilität**:  
 Selection-Screens bieten Flexibilität, da Benutzer verschiedene Parameter wie Benutzergruppe, Org-Einheiten Technische/Fachliche Rollen usw. festlegen können, um genau die Daten auszuwählen, die sie benötigen. Dies ermöglicht eine breite Anpassungsfähigkeit an verschiedene Anforderungen.
 
-Benutzerinteraktion und Kontrolle:  
+**Benutzerinteraktion und Kontrolle**:  
 Sie bieten eine interaktive Benutzeroberfläche, über die Benutzer direkt mit dem Programm interagieren können, indem sie Werte eingeben oder auswählen, um das Ergebnis des Programms zu beeinflussen. Dadurch erhalten Benutzer mehr Kontrolle über die Verarbeitung der Daten.
 
-Optimierung der Programmausführung:  
+**Optimierung der Programmausführung**:  
 Durch die Nutzung von Selection-Screens können Programme effizienter ausgeführt werden, da sie nur die vom Benutzer ausgewählten Daten verarbeiten müssen. Dies trägt dazu bei, die Ausführungszeiten zu verkürzen und die Systemressourcen besser zu nutzen.
 
-Fehlerminimierung und Datenvalidierung:  
+**Fehlerminimierung und Datenvalidierung**:  
 Selection-Screens ermöglichen auch die Validierung von Benutzereingaben, bevor das Programm ausgeführt wird. Dadurch können Fehler vermieden werden, indem ungültige Eingaben abgefangen und Benutzer aufgefordert werden, korrekte Werte einzugeben.
 
-Wo können SELECTION-SCREENS verwendet werden?  
+**Wo können SELECTION-SCREENS verwendet werden?**
 Selection-Screens können direkt in ABAP-Reporten erstellt werden. Bei der Erstellung oder Bearbeitung eines Reports in der ABAP Workbench kann der Entwickler Selection-Screen-Anweisungen hinzufügen, um den interaktiven Bildschirm zu definieren. Selection-Screens können auch in anderen Objekten wie Funktionsbausteinen, Methoden, Include-Programmen usw. definiert und verwendet werden, um Eingabeparameter oder -filter festzulegen.
 
-Wie erstelle ich einen SELECTION-SCREEN?  
+**Wie erstelle ich einen SELECTION-SCREEN?**  
 Innerhalb des Programms oder der Komponente können Anweisungen zur Definition des Selection-Screens verwendet werden. Einige wichtige Anweisungen sind:
 ```abap
 "Definiert den Anfang und das Ende des Selection-Screens.
@@ -130,7 +130,7 @@ SELECT-OPTIONS
 SELECTION-SCREEN COMMENT
 ```
 
-Beispiel SELECTION-SCREEN Block B1A aus dem Reader:
+**Beispiel SELECTION-SCREEN Block B1A aus dem Reader**:
 
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image032.png) -->
 
@@ -138,109 +138,101 @@ Beispiel SELECTION-SCREEN Block B1A aus dem Reader:
 
 ### Erstellung und Gestaltung von Benutzeroberflächen
 
-Auswahl des Entwicklungselements:  
+**Auswahl des Entwicklungselements**:  
 Um mit der Erstellung und Gestaltung von Dynpros zu beginnen muss zunächst ein neues Dynpro innerhalb eines Entwicklungselements erstellt werden. Typischerweise ist dies ein Paket oder eine Entwicklungsklasse.
 
-Neues Dynpro erstellen:  
+**Neues Dynpro erstellen**:  
 Auf das ausgewählte Entwicklungselement =>"Neu"=>"Dynpro" aus dem Dropdown-Menü, um einen neues Dynpro zu erstellen. Nachdem die grundlegenden Informationen für das neue Dynpro eingegeben wurden, wird der Screen Painter geöffnet, indem das neu erstellte Dynpro ausgewählt wird. Mit einem Doppelklick darauf oder über die Schaltfläche "Screen Painter" in der Werkzeugleiste.
 
-Arbeiten im Screen Painter:  
+**Arbeiten im Screen Painter**:  
 Der Screen Painter ist nun geöffnet und es kann mit der Gestaltung des Dynpros begonnen werden. Hier ist es möglich Elemente wie Textfelder, Eingabefelder, Auswahllisten usw. auf dem Bildschirm platzieren und das Layout des Dynpros gestalten.
 
-Dynpro-Nummer:  
+**Dynpro-Nummer**:  
 Jedes Dynpro wird durch eine eindeutige Nummer identifiziert, die seine Position innerhalb eines SAP-Systems angibt. Diese Nummer wird zur Navigation und Steuerung zwischen verschiedenen Bildschirmen verwendet.
 
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image034.png) -->
 
-Subscreens:  
+**Subscreens**:  
 Ein Subscreen ist ein separater Bildschirm (Dynpro), der in einen anderen Dynpro eingebettet wird, um spezifische Informationen anzuzeigen oder Funktionen bereitzustellen.  
 Subscreens werden verwendet, um Teile der Benutzeroberfläche zu modularisieren, wodurch die Wiederverwendung von Bildschirminhalten und die Trennung von logischen Teilen der Benutzeroberfläche ermöglicht werden. Ein Subscreen wird in einem Containerbereich eines Hauptdynpros platziert und dort angezeigt. Die Anzeige eines Subscreens kann dynamisch während der Laufzeit eines Dynpros gesteuert werden. Daten können zwischen dem Hauptdynpro und dem Subscreen ausgetauscht werden, ähnlich wie bei der Datenbindung zwischen verschiedenen Teilen desselben Dynpros. Um einen Subscreen in einem Hauptdynpro zu definieren und einzubetten, wird die `DEFINITION SCREEN`-Anweisung verwendet. Subscreens können zur Laufzeit eines Dynpros über ABAP-Code hinzugefügt, geändert oder entfernt werden.
 
-  
-
-Layout:  
+**Layout**:  
 Das Layout eines Dynpros wird im Screen Painter erstellt. Es umfasst die visuelle Anordnung der Bildschirmelemente wie Textfelder, Eingabefelder, usw. Hier wird festgelegt, wie die Elemente auf dem Bildschirm angeordnet sind und wie sie miteinander interagieren.
 
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image036.png)  -->
 
-Bildschirm-Elemente eines Dynpros:  
-- Textfelder: Zur Anzeige von Texten oder Beschriftungen.  
-- Eingabefelder: Zum Erfassen von Benutzereingaben wie Zahlen, Texten oder anderen Daten.  
-- Auswahlelemente: Wie Checkboxen, Auswahllisten oder Radiobuttons, um Benutzern Auswahlmöglichkeiten zu bieten.  
-- Funktions- und Navigationsleisten: Enthalten Schaltflächen für Aktionen wie Speichern, Zurück, etc.
+**Bildschirm-Elemente eines Dynpros**:  
+- **Textfelder**: Zur Anzeige von Texten oder Beschriftungen.  
+- **Eingabefelder**: Zum Erfassen von Benutzereingaben wie Zahlen, Texten oder anderen Daten.  
+- **Auswahlelemente**: Wie Checkboxen, Auswahllisten oder Radiobuttons, um Benutzern Auswahlmöglichkeiten zu bieten.  
+- **Funktions- und Navigationsleisten**: Enthalten Schaltflächen für Aktionen wie Speichern, Zurück, etc.
 
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image038.png) -->
 
-Flow-Logic (Ablauflogik):  
+**Flow-Logic (Ablauflogik)**:  
 Die Flow-Logic eines Dynpros definiert die Verarbeitungslogik, die auf Benutzeraktionen oder -eingaben reagiert. Diese Logik umfasst ABAP-Code, der festlegt, wie das System auf Ereignisse wie Klicken von Schaltflächen oder Eingabe in Felder reagiert.
 
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image040.png) -->
 
-PBO (Process Before Output):  
+**PBO (Process Before Output)**:  
 Die PBO-Logik definiert, was vor der Anzeige des Dynpros geschehen soll. Hier werden Initialisierungen von Variablen, Vorbelegungen von Feldern oder andere Vorbereitungen für die Anzeige durchgeführt.
 
-PAI (Process After Input):  
+**PAI (Process After Input)**:  
 Die PAI-Logik wird ausgeführt, wenn der Benutzer mit dem Dynpro interagiert und eine Aktion ausführt. Hier wird festgelegt, wie das System auf Benutzeraktionen reagiert, z.B. wenn ein Button geklickt oder ein Eingabefeld ausgefüllt wird.
 
-Verbindung mit ABAP-Programmen:  
+**Verbindung mit ABAP-Programmen**:  
 Ein Dynpro ist eng mit einem ABAP-Programm verbunden, das die Logik für die Verarbeitung von Daten und Ereignissen auf dem Dynpro enthält. Die Kommunikation zwischen dem Dynpro und dem zugehörigen ABAP-Programm erfolgt über Module und Funktionen.
 
 
 ### Ansteuern von Dynpros (CALL SCREEN, SKIP TO SCREEN, LEAVE SCREEN etc.)
 
-In der SAP ABAP-Programmierung dienen CALL SCREEN, SKIP TO SCREEN und LEAVE SCREEN dazu, die Steuerung und Navigation zwischen verschiedenen Dynpros innerhalb einer ABAP-Anwendung zu ermöglichen. Hier sind die Unterschiede und Verwendungszwecke dieser Befehle:
+In der SAP ABAP-Programmierung dienen `CALL SCREEN`, `SKIP TO SCREEN` und `LEAVE SCREEN` dazu, die Steuerung und Navigation zwischen verschiedenen Dynpros innerhalb einer ABAP-Anwendung zu ermöglichen. Hier sind die Unterschiede und Verwendungszwecke dieser Befehle:
 
-CALL SCREEN  
-Der CALL SCREEN Befehl wird verwendet, um einen anderen Dynpro innerhalb desselben Programms aufzurufen und anzuzeigen. Es handelt sich um einen synchronen Aufruf, bei dem die Steuerung an den aufgerufenen Bildschirm übergeben wird. Nach der Verarbeitung des aufgerufenen Dynpros kehrt das Programm zur Verarbeitung an die Stelle zurück, von der aus der CALL SCREEN-Befehl aufgerufen wurde. Daten können zwischen dem aufrufenden Dynpro und dem aufgerufenen Dynpro über sogenannte „Export“- und „Import“-Parameter ausgetauscht werden.
-
+**CALL SCREEN**  
+Der `CALL SCREEN` Befehl wird verwendet, um einen anderen Dynpro innerhalb desselben Programms aufzurufen und anzuzeigen. Es handelt sich um einen synchronen Aufruf, bei dem die Steuerung an den aufgerufenen Bildschirm übergeben wird. Nach der Verarbeitung des aufgerufenen Dynpros kehrt das Programm zur Verarbeitung an die Stelle zurück, von der aus der CALL SCREEN-Befehl aufgerufen wurde. Daten können zwischen dem aufrufenden Dynpro und dem aufgerufenen Dynpro über sogenannte „Export“- und „Import“-Parameter ausgetauscht werden.  
 Beispiel:
 ```abap
 CALL SCREEN <Dynpro-Nummer>.
 ```
 
-SKIP TO SCREEN  
-Der SKIP TO SCREEN Befehl dient dazu, die Steuerung an einen anderen Bildschirm zu übergeben, ohne die aktuellen Änderungen zu speichern oder zu verarbeiten. Es handelt sich um einen asynchronen Sprung, bei dem die aktuelle Verarbeitung abgebrochen wird und direkt zum aufgerufenen Bildschirm gesprungen wird, ohne Daten zu übergeben oder zu verarbeiten. Es wird häufig für Navigationen innerhalb von Reports verwendet, ohne eine spezifische Datenverarbeitung durchzuführen.
-
+**SKIP TO SCREEN** 
+Der `SKIP TO SCREEN` Befehl dient dazu, die Steuerung an einen anderen Bildschirm zu übergeben, ohne die aktuellen Änderungen zu speichern oder zu verarbeiten. Es handelt sich um einen asynchronen Sprung, bei dem die aktuelle Verarbeitung abgebrochen wird und direkt zum aufgerufenen Bildschirm gesprungen wird, ohne Daten zu übergeben oder zu verarbeiten. Es wird häufig für Navigationen innerhalb von Reports verwendet, ohne eine spezifische Datenverarbeitung durchzuführen.  
 Beispiel: 
 ```abap
 SKIP TO SCREEN <Dynpro-Nummer>.
 ```
 
-LEAVE SCREEN  
-Der LEAVE SCREEN Befehl wird verwendet, um den aktuellen Bildschirm zu verlassen und zur Steuerung an den aufrufenden Bildschirm zurückzukehren. Es handelt sich um einen Befehl, der verwendet wird, um die aktuelle Verarbeitung zu unterbrechen und zum aufrufenden Bildschirm zurückzukehren. Er wird genutzt, wenn Änderungen im aktuellen Bildschirm nicht gespeichert oder verarbeitet werden sollen.
-
+**LEAVE SCREEN**  
+Der `LEAVE SCREEN` Befehl wird verwendet, um den aktuellen Bildschirm zu verlassen und zur Steuerung an den aufrufenden Bildschirm zurückzukehren. Es handelt sich um einen Befehl, der verwendet wird, um die aktuelle Verarbeitung zu unterbrechen und zum aufrufenden Bildschirm zurückzukehren. Er wird genutzt, wenn Änderungen im aktuellen Bildschirm nicht gespeichert oder verarbeitet werden sollen.  
 Beispiel: 
 ```abap
 LEAVE SCREEN.
 ```
 
-Zusammenfassung der Unterschiede:  
-- CALL SCREEN: Synchroner Aufruf eines anderen Dynpros innerhalb desselben Programms mit Datenübertragung und Rückkehr zur Verarbeitung.
-- SKIP TO SCREEN: Asynchroner Sprung zu einem anderen Dynpro ohne Datenübertragung und sofortige Abbruch der aktuellen Verarbeitung.
-- LEAVE SCREEN: Unterbrechung der aktuellen Verarbeitung und Rückkehr zum aufrufenden Bildschirm ohne Speicherung oder Verarbeitung der aktuellen Änderungen.
+**Zusammenfassung der Unterschiede**:  
+- **CALL SCREEN**: Synchroner Aufruf eines anderen Dynpros innerhalb desselben Programms mit Datenübertragung und Rückkehr zur Verarbeitung.
+- **SKIP TO SCREEN**: Asynchroner Sprung zu einem anderen Dynpro ohne Datenübertragung und sofortige Abbruch der aktuellen Verarbeitung.
+- **LEAVE SCREEN**: Unterbrechung der aktuellen Verarbeitung und Rückkehr zum aufrufenden Bildschirm ohne Speicherung oder Verarbeitung der aktuellen Änderungen.
 
-Weitere Befehle:  
+**Weitere Befehle**:  
 Neben den bereits besprochenen Befehlen wie CALL SCREEN, SKIP TO SCREEN und LEAVE SCREEN gibt es noch weitere relevante Befehle, im Zusammenhang mit Dynpros verwendet werden können:
 
-SET SCREEN  
-Der SET SCREEN Befehl ermöglicht die Aktivierung oder Deaktivierung von Bildschirmelementen (z.B. Feldern, Buttons) während der Laufzeit eines Dynpros. Durch SET SCREEN können Sie dynamisch die Anzeige- oder Bearbeitungsattribute von Feldern steuern, je nachdem, wie der Programmablauf fortschreitet.
-
+**SET SCREEN**  
+Der `SET SCREEN` Befehl ermöglicht die Aktivierung oder Deaktivierung von Bildschirmelementen (z.B. Feldern, Buttons) während der Laufzeit eines Dynpros. Durch SET SCREEN können Sie dynamisch die Anzeige- oder Bearbeitungsattribute von Feldern steuern, je nachdem, wie der Programmablauf fortschreitet.  
 Beispiel: 
 ```abap
 SET SCREEN <Element-ID> PROPERTY <Eigenschaft> = <Wert>.
 ```
 
-LOOP AT SCREEN  
-Mit LOOP AT SCREEN können Sie über alle Bildschirmelemente eines Dynpros iterieren und bestimmte Operationen durchführen. Dieser Befehl ermöglicht die dynamische Bearbeitung von Bildschirmelementen während der Laufzeit, z.B. das Setzen von Eigenschaften oder das Ausblenden von Feldern basierend auf bestimmten Bedingungen.
-
+**LOOP AT SCREEN**  
+Mit `LOOP AT SCREEN` können Sie über alle Bildschirmelemente eines Dynpros iterieren und bestimmte Operationen durchführen. Dieser Befehl ermöglicht die dynamische Bearbeitung von Bildschirmelementen während der Laufzeit, z.B. das Setzen von Eigenschaften oder das Ausblenden von Feldern basierend auf bestimmten Bedingungen.  
 Beispiel: 
 ```abap
 LOOP AT SCREEN. ... ENDLOOP.
 ```
 
-CLEAR SCREEN  
-Der Befehl CLEAR SCREEN löscht alle Daten und setzt die Bildschirmelemente eines Dynpros zurück. Er dient dazu, die angezeigten Informationen zu löschen und den Bildschirm in einen Ausgangszustand zurückzusetzen.
-
+**CLEAR SCREEN**  
+Der Befehl `CLEAR SCREEN` löscht alle Daten und setzt die Bildschirmelemente eines Dynpros zurück. Er dient dazu, die angezeigten Informationen zu löschen und den Bildschirm in einen Ausgangszustand zurückzusetzen.  
 Beispiel: 
 ```abap
 CLEAR SCREEN.
@@ -271,12 +263,12 @@ Mit den folgenden Buttons kann durch das Programm debuggen:
 ### Breakpoints
 
 Es gibt verschiedene Möglichkeiten bei der Programmausführung in den Debugger zu wechseln:  
-- "/h" im Kommandofenster eingeben. Der Debugger wird sofort am Anfang des Programms ausgeführt. Empfehlenswert, wenn das Programm vom Programmstart an debuggt werden soll.
-- "/hs" im Kommandofenster eingeben. Der Debugger wird sofort am Anfang des Programms gestartet, inklusive der Programmteile, die den Status "Systemprogramm" haben. Das Systemdebugging ist normalerweise nicht notwendig. Wenn jedoch ein Programm debuggt werden soll, was den Status "Systemprogramm" hat, dann macht dieser Debuggingmodus Sinn.
+- `/h` im Kommandofenster eingeben. Der Debugger wird sofort am Anfang des Programms ausgeführt. Empfehlenswert, wenn das Programm vom Programmstart an debuggt werden soll.
+- `/hs` im Kommandofenster eingeben. Der Debugger wird sofort am Anfang des Programms gestartet, inklusive der Programmteile, die den Status "Systemprogramm" haben. Das Systemdebugging ist normalerweise nicht notwendig. Wenn jedoch ein Programm debuggt werden soll, was den Status "Systemprogramm" hat, dann macht dieser Debuggingmodus Sinn.
 
 Eine weitere Möglichkeit den Debugger aufzurufen ist via das Kommando `break`  
 - `break <benutzername>` im Coding schreiben. Das Programm stoppt nur beim SAP-Benutzer <benutzername>. Empfehlenswert, wenn das Programm an einer bestimmten Stelle in den Debugger springen soll und man selbst das Programm debuggen will. Hier ist es auch meist unproblematisch, wenn man vergisst den Breakpoint bei einem Transport zu löschen, da bei anderen SAP-Usern der Sprung in den Debugger nicht erfolgt.   
-- `break-point` Hier springt das Programm bei jedem SAP-Benutzer mit Debuggerberechtigung in den Debugger. Es ist dringend zu empfehlen diesen Befehl nur mit Vorsicht zu nutzen. Es ist unangenehm und wirkt unprofessionell, wenn im Qualitäts- oder Produktivsystem andere Benutzer oder gar der Fachwender mit Debuggerberechtigung ungewollt in den Debugger springen. Hier ist z. B. "break <benutzername> vorzuziehen. Vor jedem Transport ins Qualitätssystem und besonders in Produktivsystem sollte das Code um diese Breakpoints „break-point“ bereinigt werden. Noch besser ist es sie gar nicht zu verwenden. Dann kann es auch nicht vergessen werden sie zu löschen.  
+- `break-point` Hier springt das Programm bei jedem SAP-Benutzer mit Debuggerberechtigung in den Debugger. Es ist dringend zu empfehlen diesen Befehl nur mit Vorsicht zu nutzen. Es ist unangenehm und wirkt unprofessionell, wenn im Qualitäts- oder Produktivsystem andere Benutzer oder gar der Fachwender mit Debuggerberechtigung ungewollt in den Debugger springen. Hier ist z.B. `break <benutzername>` vorzuziehen. Vor jedem Transport ins Qualitätssystem und besonders in Produktivsystem sollte das Code um diese Breakpoints „break-point“ bereinigt werden. Noch besser ist es sie gar nicht zu verwenden. Dann kann es auch nicht vergessen werden sie zu löschen.  
 - `Break-point id <Checkpoint-Gruppe>` In der Transaktion SAAB kann man Checkpoint-Gruppen definieren. Im Coding kann man auf diese Checkpoint-Gruppe verweisen. In der Transaktion SAAB kann man dann für diese Checkpoint-Gruppe einstellen, ob dieser dynamische Break-Point an dem Tag aktiv sein soll. Das Programm spring dann für den eigenen User an dem heutigen Datum in dem aktuellen System in den Debugger, sofern die Debugging-Berechtigung vorhanden ist. Ganz praktisch ist es auch, dass SAP viele Checkpoint-Gruppen angelegt hat, die man selbst auch im Qualitäts- oder Produktiv-System aktivieren kann.
 
 ### dynamische Breakpoints
