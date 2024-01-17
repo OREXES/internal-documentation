@@ -41,7 +41,7 @@ Datenbank
 | Transatkion | Beschreibung |
 |---|---|
 |DB02|Monitor für Tabellen und Indices|
-|SCU3|\|   \|<br>\|---\|<br>\|Tabellenhistorie\||
+|SCU3|Tabellenhistorie|
 |SE11|ABAP Dictionary Pflege|
 |SE14|Werkzeuge für Dicitionary-Tabellen|
 |SE16 / SE16N / SE16H|Data Browser|
@@ -54,7 +54,7 @@ Systemanalyse
 | Transatkion | Beschreibung |
 |---|---|
 |DB02 / ST04|Monitor für Tabellen und Indices|
-|SAT|\|   \|<br>\|---\|<br>\|ABAP-Trace\||
+|SAT|ABAP-Trace|
 |ST01|System-Trace|
 |ST02 / ST06|Setups/Tune Buffers / Operating System Monitor|
 |ST03|Systemlast und Performance Statistik|
