@@ -89,8 +89,8 @@ Transportwesen
   -  **Ctrl** + **F12**: Öffnet die Übersicht über die letzten Aktivitäten, was hilfreich sein kann, um kürzlich bearbeitete Objekte schnell wiederzufinden.  
   -  **F9**: Ausführen/Anzeigen der ausgewählten Transaktion, sofern eine Transaktion ausgewählt ist.  
   -  **Ctrl** + **S**: Speichert das aktuelle Objekt.  
-
--        Fonteinstellungen anpassen
+  
+- Fonteinstellungen anpassen
 <!-- 
 o   ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image059.png)
 
