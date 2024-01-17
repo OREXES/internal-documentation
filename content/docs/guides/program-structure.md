@@ -80,8 +80,14 @@ Die Optimierung von OpenSQL-Anweisungen in ABAP für bessere Performance ist bes
 
 Beschränke die abgefragten Daten auf das Notwendige. Verwende die `WHERE`-Klausel, um die Datenmenge zu reduzieren.  
 Beispiel:  
-Schlecht: ```abap SELECT * FROM mara INTO TABLE @data(mara_tab).```  
-Besser: ```abap SELECT matnr, mtart FROM mara INTO TABLE @data(mara_tab) WHERE mtart = 'FERT'.```
+Schlecht: 
+```abap 
+SELECT * FROM mara INTO TABLE @data(mara_tab).
+```
+Besser:
+```abap
+SELECT matnr, mtart FROM mara INTO TABLE @data(mara_tab) WHERE mtart = 'FERT'.
+```
 
 ### Indizes nutzen
 
@@ -92,8 +98,14 @@ Beispiel:
 ### Vermeidung von SELECT
 Wähle nur die benötigten Spalten statt `SELECT *`, um die Datenmenge zu minimieren.  
 Beispiel:  
-Schlecht: ```abap SELECT * FROM kna1 INTO TABLE @data(kna1_tab).```
-Besser: ```abap SELECT kunnr, name1 FROM kna1 INTO TABLE @data(kna1_tab).```
+Schlecht: 
+```abap 
+SELECT * FROM kna1 INTO TABLE @data(kna1_tab).
+```
+Besser: 
+```abap 
+SELECT kunnr, name1 FROM kna1 INTO TABLE @data(kna1_tab).
+```
 
 ### Joins effizient nutzen
 
