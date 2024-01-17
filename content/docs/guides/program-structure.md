@@ -44,8 +44,8 @@ Nachfolgend die Tabelle der Binäre Vergleichsoperatoren:
 
   Nachfolgend die Tabelle der Vergleichsoperatoren für zeichenartige Datentypen:
 
-|---|---|---|
 |**Operator**|**Beschreibung**|**Bedeutung**|
+|---|---|---|
 |**CO**|Enthält nur|Wahr, wenn operand1 nur Zeichen aus operand2 enthält. Groß-/Kleinschreibung und schließende Leerzeichen beider Operanden werden berücksichtigt.|
 |**CN**|Enthält nicht nur|Wahr, wenn ein relationaler Ausdruck mit CO falsch ist, wenn operand1 also nicht nur Zeichen aus operand2 enthält.|
 |**CA**|Enthält beliebig|Wahr, wenn operand1 mindestens ein Zeichen aus operand2 enthält. Groß-/Kleinschreibung und schließende Leerzeichen beider Operanden werden berücksichtigt.|
@@ -68,16 +68,16 @@ SELECT carrid, connid
 ```
 
 ### Bedingungen in Open SQL
-|---|---|
 |**Befehl**|**Funktion**|
+|---|---|
 |GROUP BY|Gruppiere das Ergebnis nach Feld|
 |COUNT|Zähle zusammen|
 |HAVING|Schränkt eine gruppierte Datenmenge ein|
 |ORDER BY|Sortiert die Ergebnisse auf- oder absteigend|
 
 ### Aggregatfunktionen
-| ---- | ---- |
 | **Befehl** | **Funktion** |
+| ---- | ---- |
 | AVG | Ermittelt den Durchschnitt |
 | COUNT | Zählt die Anzahl der Einträge |
 | MAX | Ermittelt das Maximum |
