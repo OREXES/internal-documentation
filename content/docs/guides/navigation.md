@@ -78,17 +78,17 @@ Transportwesen
 
 ## 4.2 SE80 Deep Dive (Simon)
 
--  Shortcuts
+-  Shortcuts  
   -  F8: Startet das ausgewählte Programm, den ausgewählten Funktionsbaustein oder die Klasse.  
-o   Shift + F1: Zeigt die Hilfsdokumentation für das ausgewählte Element an.  
-o   Ctrl + Shift + F3: Erzeugt ein neues Objekt. Dies öffnet den Dialog zum Anlegen neuer Objekte wie Programme, Klassen, Module usw.  
-o   Ctrl + F3: Aktiviert die "Wo verwendet"-Liste, um festzustellen, wo das ausgewählte Objekt im System verwendet wird.  
-o   Ctrl + Shift + F10: Öffnet den Dialog zum Anzeigen der Objekthistorie, was nützlich ist, um Änderungen am ausgewählten Objekt zu verfolgen.  
-o   F7: Geht einen Schritt zurück im Navigationsverlauf, ähnlich der "Zurück"-Funktion in Webbrowsern.  
-o   Ctrl + F11: Zum Aktivieren des 'Versionsvergleichs', der es ermöglicht, verschiedene Versionen eines Objekts zu vergleichen.  
-o   Ctrl + F12: Öffnet die Übersicht über die letzten Aktivitäten, was hilfreich sein kann, um kürzlich bearbeitete Objekte schnell wiederzufinden.  
-o   F9: Ausführen/Anzeigen der ausgewählten Transaktion, sofern eine Transaktion ausgewählt ist.  
-o   Ctrl + S: Speichert das aktuelle Objekt.  
+  -  Shift + F1: Zeigt die Hilfsdokumentation für das ausgewählte Element an.  
+  -  Ctrl + Shift + F3: Erzeugt ein neues Objekt. Dies öffnet den Dialog zum Anlegen neuer Objekte wie Programme, Klassen, Module usw.  
+  -  Ctrl + F3: Aktiviert die "Wo verwendet"-Liste, um festzustellen, wo das ausgewählte Objekt im System verwendet wird.  
+  -  Ctrl + Shift + F10: Öffnet den Dialog zum Anzeigen der Objekthistorie, was nützlich ist, um Änderungen am ausgewählten Objekt zu verfolgen.  
+  -  F7: Geht einen Schritt zurück im Navigationsverlauf, ähnlich der "Zurück"-Funktion in Webbrowsern.  
+  -  Ctrl + F11: Zum Aktivieren des 'Versionsvergleichs', der es ermöglicht, verschiedene Versionen eines Objekts zu vergleichen.  
+  -  Ctrl + F12: Öffnet die Übersicht über die letzten Aktivitäten, was hilfreich sein kann, um kürzlich bearbeitete Objekte schnell wiederzufinden.  
+  -  F9: Ausführen/Anzeigen der ausgewählten Transaktion, sofern eine Transaktion ausgewählt ist.  
+  -  Ctrl + S: Speichert das aktuelle Objekt.  
 
 -        Fonteinstellungen anpassen
 <!-- 
