@@ -92,13 +92,13 @@ Die Datentypen werden unterschieden zwischen Elementare Typen, Referenztypen und
 - Referenztypen  
    Diese Datentypen beschreiben Datenobjekte, die Referenzen auf andere Datenobjekte oder Instanzen von Klassen enthalten.  
 - Komplexe Typen  
-	Diese Datentypen sind aus anderen Typen zusammengesetzt und werden zwischen folgende Arten unterschieden:
-	- Strukturierter Typ  
-	  Folge beliebiger Datentypen zur Zusammenfassung logisch zusammenhängender Arbeitsbereiche.
-	- Tabellentypen  
-	  Folge beliebiger Anzahl an Zeilen des gleichen Datentyps. Sie sind durch ihren Zeilentyp charakterisiert. Die Tabellenart bestimmt, wie der Zugriff auf die Tabelle erfolgt.
-	- Meshtypen  
-	  Spezieller strukturierter Typ mit tabellarischen Inhalt, welche Assoziationen zueinander haben.
+  Diese Datentypen sind aus anderen Typen zusammengesetzt und werden zwischen folgende Arten unterschieden:
+  - Strukturierter Typ  
+    Folge beliebiger Datentypen zur Zusammenfassung logisch zusammenhängender Arbeitsbereiche.
+    - Tabellentypen  
+      Folge beliebiger Anzahl an Zeilen des gleichen Datentyps. Sie sind durch ihren Zeilentyp charakterisiert. Die Tabellenart bestimmt, wie der Zugriff auf die Tabelle erfolgt.
+    - Meshtypen  
+      Spezieller strukturierter Typ mit tabellarischen Inhalt, welche Assoziationen zueinander haben.
 Hier eine Übersicht über SAP-[Datentypen](https://help.sap.com/doc/abapdocu_750_index_htm/7.50/de-de/abentypes_objects_oview.htm).
 
 ABAP Datentypen
