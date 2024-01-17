@@ -9,7 +9,7 @@ weight: 810
 
 Relationale Operatoren, die zum Vergleich von zwei oder mehr Operanden eines beliebigen Datentyps verwendet werden.  
 Relationale Operatoren und verbinden zwei oder mehr Operanden eines beliebigen Datentyps, um einen relationalen Ausdruck oder einen Vergleichsausdruck zu bilden. Das Ergebnis des relationalen Ausdrucks ist wahr oder falsch.  
-Für bestimmte Datentypen gibt es zusätzliche relationale Operatoren. Der Prädikatsoperator "IS" qualifiziert einen Operanden.  
+Für bestimmte Datentypen gibt es zusätzliche relationale Operatoren. Der Prädikatsoperator `IS` qualifiziert einen Operanden.  
 Wenn Operanden von unterschiedlicher Länge und unterschiedlichem Typ sind, wird eine automatische Konvertierung durchgeführt.  
 Die automatische Typkonvertierung wird für einen der beiden Operanden durchgeführt. Die automatische Konvertierung kann durch den Datentyp bestimmt werden, und die folgende Liste zeigt den Vorrang der Datentypen.  
 Wenn ein Operand vom Datentyp I ist, dann wird der andere Operand in I konvertiert.  
