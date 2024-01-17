@@ -132,9 +132,9 @@ Statt FOR ALL ENTRIES, besser JOIN oder WHERE ... IN (SELECT ...)
 Nutze Aggregatfunktionen (wie SUM, MAX, MIN) in deinen Abfragen, um Berechnungen auf der Datenbankebene durchzuführen, statt große Datenmengen in ABAP zu laden und dort zu verarbeiten.
 
 Beispiel:
-
+```abap
 SELECT MAX(netwr) INTO @data(max_netwr) FROM vbrk.
-
+```
 ### Vermeidung von SELECT DISTINCT
 
 SELECT DISTINCT kann Performance-Probleme verursachen, wenn es nicht notwendig ist. Prüfe, ob es wirklich benötigt wird.
@@ -148,23 +148,23 @@ Statt SELECT DISTINCT, besser die Datenmodellierung prüfen und optimieren.
 Bei Verarbeitung großer Datenmengen können Cursor verwendet werden, um den Speicherverbrauch zu minimieren.
 
 Beispiel:
-
+```abap
 OPEN CURSOR WITH HOLD FOR SELECT ...
 
 FETCH NEXT CURSOR ... INTO ...
-
+```
 ### Limitierung der Ergebnismenge
 
 Beschränke die Anzahl der zurückgegebenen Zeilen, insbesondere bei Abfragen zu Analysezwecken oder in Benutzeroberflächen.
 
 Beispiel:
-
+```abap
 SELECT ... INTO TABLE @data(...) UP TO 10 ROWS.
-
+```
 ## 2.3  Kontrollfluss (Simon)
 
 ### If-Else Abfragen
-
+```abap
 IF Bedingung_1 AND Bedingung_2.
 
     * Anweisungsblock_1
@@ -178,15 +178,15 @@ ELSE.
     * Anweisungsblock_2
 
 ENDIF.
-
+```
 ### Check Abfragen
 
 CHECK ist eine Kombination aus IF und CONTINUE. Die Nachfolgenden Befehle werden nur ausgeführt, wenn die Bedingung erfüllt ist. Andernfalls wird der Anweisungsblock verlassen.
-
+```abap
 CHECK Bedingung.
-
+```
 ### Switches
-
+```abap
 CASE sy-subrc.
 
 WHEN 0.
@@ -214,9 +214,9 @@ WHEN OTHERS.
 *   Anweisung nicht geliefert.
 
 ENDCASE.
-
+```
 ### Iteration
-
+```abap
 _While-Schleife_
 
 WHILE sek > 0.
@@ -242,7 +242,7 @@ LOOP AT itab ASSIGNING <field-symbol>.
 * Anweisungsblock_1
 
 ENDLOOP.
-
+```
 ### Return, continue, exit, leave program,
 
 RETURN beendet den aktuellen Verarbeitungsblock an jeder beliebigen Stelle im      
@@ -250,7 +250,7 @@ RETURN beendet den aktuellen Verarbeitungsblock an jeder beliebigen Stelle im �
 Programm.
 
 EXIT beendet die komplette Schleife.
-
+```abap
 DO 24 TIMES.
 
     IF sy-index = 3.
@@ -262,15 +262,15 @@ DO 24 TIMES.
     ...
 
 ENDDO.
-
+```
 Mit der CONTINUE Anweisung kann ein Anweisungsblock einer Schleife vorzeitig verlassen werden.
-
+```abap
 IF Bedingung_1.
 
     CONTINUE.
 
 ENDIF.
-
+```
 Der LEAVE PROGRAM Befehl beendet das Programm.
 
 ## 2.2 BADI (Lukas evtl. Colin)
@@ -322,7 +322,7 @@ Die lokale Implementierung findet in der Workbench statt. Um in ABAP eine Klasse
 In der Definition werden die Attribute, Methoden, ihre Eigenschaften und Schnittstellen festgelegt. Jedoch keine Ablauflogik, diese wird erst im Implementierungsabschnitt durchgeführt.
 
 Definition
-
+```abap
 CLASS lcl_beispiel DEFINITION.  
    
   
@@ -347,11 +347,11 @@ CLASS lcl_beispiel DEFINITION.
    PRIVATE SECTION.  
    
 ENDCLASS.
-
+```
 In der Definition werden die Kapselung, die Attribute, sowie die Methoden festgelegt. Wichtiger Punkt ist, dass hier noch keine Logik eingebaut wird.
 
 Implementierung
-
+```abap
 CLASS lcl_beispiel IMPLEMENTATION.  
   METHOD add.  
    
@@ -359,9 +359,9 @@ CLASS lcl_beispiel IMPLEMENTATION.
    ENDMETHOD.  
    
 ENDCLASS.
-
+```
 Vererbung Defintion
-
+```abap
 CLASS lcl_sub DEFINITION INHERITING FROM lcl_beispiel.  
    
   
@@ -377,9 +377,9 @@ CLASS lcl_sub DEFINITION INHERITING FROM lcl_beispiel.
    PRIVATE SECTION.  
    
 ENDCLASS.
-
+```
 Vererbung Implementation
-
+```abap
 CLASS lcl_sub IMPLEMENTATION.
 
     METHOD add.
@@ -391,7 +391,7 @@ CLASS lcl_sub IMPLEMENTATION.
     ENDMETHOD.
 
 ENDCLASS.
-
+```
 In der Implementierung der Klasse wird nun die Logik festgelegt. Besonders zu beachten ist es, dass der restliche ABAP-Code zwischen Definition und Implementierung geschrieben wird.
 
 Erstellung einer globalen Klasse
@@ -423,15 +423,15 @@ Durch Klick auf Quelltext, kann dann die ABAP-Logik eingebaut werden.
 Implementierung des Codes nach dem Sprung durch den Button “Quelltext”.
 
 Zugriff auf eine Static Methode
-
+```abap
 zcl_beispiel=>add(  
    EXPORTING  
      iv_num1 = 4  
      iv_num2 = 4  
  ).
-
+```
 Zugriff auf eine Instance Methode
-
+```abap
 DATA: lcl_class TYPE REF TO zcl_beispiel.  
  CREATE OBJECT lcl_class.  
    
@@ -440,7 +440,7 @@ lcl_class->sub(
      iv_num1 = 12  
      iv_num2 = 3  
  ).
-
+```
 Vererbung einer Klasse
 
 ## 2.4 Prozedurale Programmierung (Simon)
