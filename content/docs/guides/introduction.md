@@ -88,9 +88,9 @@ WRITE: 'Hello World'. "dies ist ein Inline-Kommentar
 Die SAP-Datentypen sind einem generischen Datentyp Data untergeordnet. Sie beschreiben die technische Eigenschaft eines Datenobjekts.
 Die Datentypen werden unterschieden zwischen Elementare Typen, Referenztypen und Komplexe Datentypen.  
 - Elementare Typen  
-   Diese Datentypen sind nicht aus anderen Typen zusammengesetzt. Es gibt Elementare Typen mit fester und mit variabler Länge.
+   Diese Datentypen sind nicht aus anderen Typen zusammengesetzt. Es gibt Elementare Typen mit fester und mit variabler Länge.  
 - Referenztypen  
-   Diese Datentypen beschreiben Datenobjekte, die Referenzen auf andere Datenobjekte oder Instanzen von Klassen enthalten.
+   Diese Datentypen beschreiben Datenobjekte, die Referenzen auf andere Datenobjekte oder Instanzen von Klassen enthalten.  
 - Komplexe Typen  
 	Diese Datentypen sind aus anderen Typen zusammengesetzt und werden zwischen folgende Arten unterschieden:
 	- Strukturierter Typ  
