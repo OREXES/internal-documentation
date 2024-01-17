@@ -70,34 +70,27 @@ Nachdem man auf den Sichern-Button klickt, wird der Funktionsbaustein angelegt u
 
 Defintion von Dynpros:
 
-Dynamische Programme (Dynpros) sind ein zentrales Konzept in SAP ABAP
-
-und dienen der Erstellung von interaktiven Benutzeroberflächen für SAP-                        Anwendungen. Dynpros ermöglichen die Gestaltung von Bildschirmen, auf denen Benutzer mit dem SAP-System interagieren können. Diese Bildschirme enthalten verschiedene Elemente wie Eingabefelder, Auswahllisten, Knöpfe und andere Steuerelemente, die dem Benutzer die Eingabe von Daten und die Navigation innerhalb der Anwendung ermöglichen.
+Dynamische Programme (Dynpros) sind ein zentrales Konzept in SAP ABAP und dienen der Erstellung von interaktiven Benutzeroberflächen für SAP-Anwendungen. 
+Dynpros ermöglichen die Gestaltung von Bildschirmen, auf denen Benutzer mit dem SAP-System interagieren können. Diese Bildschirme enthalten verschiedene Elemente wie Eingabefelder, Auswahllisten, 
+Knöpfe und andere Steuerelemente, die dem Benutzer die Eingabe von Daten und die Navigation innerhalb der Anwendung ermöglichen.
 
 Beispiel Dynpro aus den Benutzerantrag:
 
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image028.png)          -->
 
 Strukturierte Oberfläche:
-
 Dynpros ermöglichen eine logische und strukturierte Darstellung von Informationen, was es Benutzern erleichtert, sich in der Anwendung zurechtzufinden und die gewünschten Aufgaben auszuführen.
 
 Flexibilität und Anpassungsfähigkeit:
-
 Die Flexibilität von Dynpros erlaubt es Entwicklern, Bildschirme nach den spezifischen Anforderungen einer Anwendung zu gestalten. Dies ermöglicht eine hohe Anpassungsfähigkeit und die Berücksichtigung der Bedürfnisse verschiedener Benutzergruppen.
 
 Interaktion und Rückmeldung:
-
 Durch die Interaktion mit Dynpros erhalten Benutzer sofortige Rückmeldungen über ihre Eingaben oder Aktionen, was die Benutzererfahrung verbessert und Fehler minimiert.
 
 Nahtlose Integration mit ABAP-Logik:
-
 Dynpros sind eng mit der ABAP-Logik verbunden, was es ermöglicht, die eingegebenen Daten direkt zu verarbeiten und in den SAP-Systemen zu nutzen.
 
-  
-
 Was sind Selection-Screens?
-
 Selection-Screens sind wichtige Werkzeuge in SAP ABAP, die es Benutzern ermöglichen, Eingabeparameter für Programme oder Funktionen festzulegen. Sie bieten eine interaktive Möglichkeit für Benutzer, die Ausführung von ABAP-Programmen zu steuern, indem sie spezifische Kriterien oder Filter festlegen, bevor das Programm ausgeführt wird.
 
 Beispiel Selection-Screen aus den Reader:
@@ -105,42 +98,38 @@ Beispiel Selection-Screen aus den Reader:
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image030.png) -->
 
 Warum Selection-Screens?
-
 Der Hauptzweck von Selection-Screens besteht darin, Benutzern die Auswahl von Daten für die Verarbeitung durch ABAP-Programme zu ermöglichen. Sie dienen als Filtermechanismus, um relevante Datensätze aus einer großen Datenmenge auszuwählen.
 
 Anpassungsfähigkeit und Flexibilität:
-
 Selection-Screens bieten Flexibilität, da Benutzer verschiedene Parameter wie Benutzergruppe, Org-Einheiten Technische/Fachliche Rollen usw. festlegen können, um genau die Daten auszuwählen, die sie benötigen. Dies ermöglicht eine breite Anpassungsfähigkeit an verschiedene Anforderungen.
 
 Benutzerinteraktion und Kontrolle:
-
 Sie bieten eine interaktive Benutzeroberfläche, über die Benutzer direkt mit dem Programm interagieren können, indem sie Werte eingeben oder auswählen, um das Ergebnis des Programms zu beeinflussen. Dadurch erhalten Benutzer mehr Kontrolle über die Verarbeitung der Daten.
 
 Optimierung der Programmausführung:
-
 Durch die Nutzung von Selection-Screens können Programme effizienter ausgeführt werden, da sie nur die vom Benutzer ausgewählten Daten verarbeiten müssen. Dies trägt dazu bei, die Ausführungszeiten zu verkürzen und die Systemressourcen besser zu nutzen.
 
 Fehlerminimierung und Datenvalidierung:
-
 Selection-Screens ermöglichen auch die Validierung von Benutzereingaben, bevor das Programm ausgeführt wird. Dadurch können Fehler vermieden werden, indem ungültige Eingaben abgefangen und Benutzer aufgefordert werden, korrekte Werte einzugeben.
 
-  
-
 Wo können SELECTION-SCREENS verwendet werden?
-
 Selection-Screens können direkt in ABAP-Reporten erstellt werden. Bei der Erstellung oder Bearbeitung eines Reports in der ABAP Workbench kann der Entwickler Selection-Screen-Anweisungen hinzufügen, um den interaktiven Bildschirm zu definieren. Selection-Screens können auch in anderen Objekten wie Funktionsbausteinen, Methoden, Include-Programmen usw. definiert und verwendet werden, um Eingabeparameter oder -filter festzulegen.
 
 Wie erstelle ich einen SELECTION-SCREEN?
-
 Innerhalb des Programms oder der Komponente können Anweisungen zur Definition des Selection-Screens verwendet werden. Einige wichtige Anweisungen sind:
+```abap
+"Definiert den Anfang und das Ende des Selection-Screens.
+SELECTION-SCREEN BEGIN OF SCREEN ... END OF SCREEN
 
-SELECTION-SCREEN BEGIN OF SCREEN ... END OF SCREEN: Definiert den Anfang und das Ende des Selection-Screens.
+"Definiert Parameter für Benutzereingaben.
+PARAMETERS
 
-PARAMETERS: Definiert Parameter für Benutzereingaben.
+"Definiert Auswahlkriterien für Benutzer.
+SELECT-OPTIONS
 
-SELECT-OPTIONS: Definiert Auswahlkriterien für Benutzer.
-
-SELECTION-SCREEN COMMENT: Fügt Kommentare oder Erläuterungen zum Selection-Screen hinzu.
+"Fügt Kommentare oder Erläuterungen zum Selection-Screen hinzu.
+SELECTION-SCREEN COMMENT
+```
 
 Beispiel SELECTION-SCREEN Block B1A aus dem Reader:
 
