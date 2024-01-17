@@ -206,9 +206,9 @@ WHEN OTHERS.
 ENDCASE.
 ```
 ### Iteration
-```abap
-_While-Schleife_
 
+**While-Schleife**
+```abap
 WHILE sek > 0.
 
     WRITE: / sek.
@@ -216,17 +216,17 @@ WHILE sek > 0.
     sek = sek - 1.
 
 ENDWHILE.
-
-_Do Schleife_
-
+```
+**Do-Schleife**
+```abap
 DO 24 TIMES.
 
 * Anweisungsblock_1
 
 ENDDO.
-
-_Loop-Schleife_
-
+```
+**Loop-Schleife**
+```abap
 LOOP AT itab ASSIGNING <field-symbol>.
 
 * Anweisungsblock_1
