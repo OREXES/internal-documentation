@@ -31,8 +31,8 @@ Ist ein Operand vom Datentyp C und der andere Operand vom Typ X, so wird der Typ
 
 Nachfolgend die Tabelle der Binäre Vergleichsoperatoren:
 
-|---|---|---|
 |**Operator**|**Beschreibung**|**Bedeutung**|
+|---|---|---|
 |**=, EQ**|Gleich|Wahr, wenn der Wert von Operand1 mit dem Wert von Operand2 übereinstimmt, sonst falsch.|
 |**<>, NE**|Nicht gleich|Wahr, wenn der Wert von Operand1 nicht mit dem Wert von Operand2 übereinstimmt, sonst falsch.|
 |**Is initial**|Ist initialisiert|Die Bedingung wird wahr, wenn sich der Inhalt der Variablen gegenüber dem ursprünglich zugewiesenen Wert nicht ändert.|
