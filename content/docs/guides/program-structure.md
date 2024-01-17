@@ -121,11 +121,11 @@ SELECT a~matnr, b~maktx FROM mara AS a INNER JOIN makt AS b ON a~matnr = b~matnr
 ```
 ### FOR ALL ENTRIES vermeiden
 
-Wenn möglich, vermeide FOR ALL ENTRIES, da es ineffizient sein kann, insbesondere bei großen Datenmengen.
+Wenn möglich, vermeide `FOR ALL ENTRIES`, da es ineffizient sein kann, insbesondere bei großen Datenmengen.
 
 Beispiel:
 
-Statt FOR ALL ENTRIES, besser JOIN oder WHERE ... IN (SELECT ...)
+Statt `FOR ALL ENTRIES`, besser `JOIN` oder `WHERE ... IN (SELECT ...)`
 
 ### Aggregatfunktionen nutzen
 
@@ -137,7 +137,7 @@ SELECT MAX(netwr) INTO @data(max_netwr) FROM vbrk.
 ```
 ### Vermeidung von SELECT DISTINCT
 
-SELECT DISTINCT kann Performance-Probleme verursachen, wenn es nicht notwendig ist. Prüfe, ob es wirklich benötigt wird.
+`SELECT DISTINCT` kann Performance-Probleme verursachen, wenn es nicht notwendig ist. Prüfe, ob es wirklich benötigt wird.
 
 Beispiel:
 
@@ -181,7 +181,7 @@ ENDIF.
 ```
 ### Check Abfragen
 
-CHECK ist eine Kombination aus IF und CONTINUE. Die Nachfolgenden Befehle werden nur ausgeführt, wenn die Bedingung erfüllt ist. Andernfalls wird der Anweisungsblock verlassen.
+`CHECK` ist eine Kombination aus `IF` und `CONTINUE`. Die Nachfolgenden Befehle werden nur ausgeführt, wenn die Bedingung erfüllt ist. Andernfalls wird der Anweisungsblock verlassen.
 ```abap
 CHECK Bedingung.
 ```
@@ -245,11 +245,8 @@ ENDLOOP.
 ```
 ### Return, continue, exit, leave program,
 
-RETURN beendet den aktuellen Verarbeitungsblock an jeder beliebigen Stelle im      
-
-Programm.
-
-EXIT beendet die komplette Schleife.
+`RETURN` beendet den aktuellen Verarbeitungsblock an jeder beliebigen Stelle im Programm.
+`EXIT` beendet die komplette Schleife.
 ```abap
 DO 24 TIMES.
 
@@ -263,7 +260,7 @@ DO 24 TIMES.
 
 ENDDO.
 ```
-Mit der CONTINUE Anweisung kann ein Anweisungsblock einer Schleife vorzeitig verlassen werden.
+Mit der `CONTINUE` Anweisung kann ein Anweisungsblock einer Schleife vorzeitig verlassen werden.
 ```abap
 IF Bedingung_1.
 
