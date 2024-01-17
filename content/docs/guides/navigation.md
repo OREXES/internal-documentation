@@ -78,9 +78,8 @@ Transportwesen
 
 ## 4.2 SE80 Deep Dive (Simon)
 
--        Shortcuts
-
-o   F8: Startet das ausgewählte Programm, den ausgewählten Funktionsbaustein oder die Klasse.  
+-  Shortcuts
+  -  F8: Startet das ausgewählte Programm, den ausgewählten Funktionsbaustein oder die Klasse.  
 o   Shift + F1: Zeigt die Hilfsdokumentation für das ausgewählte Element an.  
 o   Ctrl + Shift + F3: Erzeugt ein neues Objekt. Dies öffnet den Dialog zum Anlegen neuer Objekte wie Programme, Klassen, Module usw.  
 o   Ctrl + F3: Aktiviert die "Wo verwendet"-Liste, um festzustellen, wo das ausgewählte Objekt im System verwendet wird.  
