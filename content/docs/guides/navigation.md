@@ -38,7 +38,7 @@ ABAP
 
 Datenbank
 
-|   |   |
+| Transatkion | Beschreibung |
 |---|---|
 |DB02|Monitor für Tabellen und Indices|
 |SCU3|\|   \|<br>\|---\|<br>\|Tabellenhistorie\||
@@ -51,7 +51,7 @@ Datenbank
 
 Systemanalyse
 
-|   |   |
+| Transatkion | Beschreibung |
 |---|---|
 |DB02 / ST04|Monitor für Tabellen und Indices|
 |SAT|\|   \|<br>\|---\|<br>\|ABAP-Trace\||
@@ -64,7 +64,7 @@ Systemanalyse
 
 Transportwesen
 
-|   |   |
+| Transatkion | Beschreibung |
 |---|---|
 |SCC1|Mandantenkopie – Sonderselektion|
 |SE03|Transport Organizer Tools|
