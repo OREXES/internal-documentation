@@ -10,7 +10,7 @@ weight: 814
 ABAP
 
 |   |   |
-|---|---|
+|Transaktion|Beschreibung|
 |BAPI|BAPI Explorer|
 |CMOD|Erweiterungen|
 |SAAB|Aktivierbare Checkpoints|
