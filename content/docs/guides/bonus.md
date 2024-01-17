@@ -9,32 +9,32 @@ weight: 817
 
 -        Für die Erstellung von sauberem und wartbarem ABAP-Code gibt es verschiedene Richtlinien und Best Practices, die sich an den Prinzipien von "Clean Code" orientieren. Hier sind einige Schlüsselregeln mit Beispielen:
 
--        Klare und aussagekräftige Benennung: Variablen, Methoden und Klassen sollten so benannt werden, dass sie ihre Funktion oder ihren Zweck klar beschreiben.
--        Beispiel: Verwende “kundenNummer” anstelle von knr für eine Variable, die eine Kundennummer darstellt.
+-        Klare und aussagekräftige Benennung: Variablen, Methoden und Klassen sollten so benannt werden, dass sie ihre Funktion oder ihren Zweck klar beschreiben.  
+        Beispiel: Verwende “kundenNummer” anstelle von knr für eine Variable, die eine Kundennummer darstellt.
 
--        Vermeidung von globalen Variablen: Globale Variablen sollten vermieden werden, da sie die Lesbarkeit und Wartbarkeit des Codes beeinträchtigen können.
--        Beispiel: Nutze lokale Variablen innerhalb von Funktionen oder Methoden anstatt globale Variablen.
+-        Vermeidung von globalen Variablen: Globale Variablen sollten vermieden werden, da sie die Lesbarkeit und Wartbarkeit des Codes beeinträchtigen können.  
+        Beispiel: Nutze lokale Variablen innerhalb von Funktionen oder Methoden anstatt globale Variablen.
 
--        Einhaltung der SOLID-Prinzipien: Diese Prinzipien fördern unter anderem die Modularität und Wiederverwendbarkeit des Codes.
--        Beispiel: Implementiere das Single-Responsibility-Prinzip, indem du sicherstellst, dass jede Klasse oder Methode nur eine Aufgabe erfüllt.
+-        Einhaltung der SOLID-Prinzipien: Diese Prinzipien fördern unter anderem die Modularität und Wiederverwendbarkeit des Codes.  
+        Beispiel: Implementiere das Single-Responsibility-Prinzip, indem du sicherstellst, dass jede Klasse oder Methode nur eine Aufgabe erfüllt.
 
--        Konsistente Formatierung: Einheitliche Formatierung des Codes verbessert die Lesbarkeit.
--        Beispiel: Halte dich an eine konsistente Einrückung und verwende Leerzeilen, um logische Abschnitte im Code zu trennen.
+-        Konsistente Formatierung: Einheitliche Formatierung des Codes verbessert die Lesbarkeit.  
+        Beispiel: Halte dich an eine konsistente Einrückung und verwende Leerzeilen, um logische Abschnitte im Code zu trennen.
 
--        Vermeidung von tief verschachtelten Strukturen: Tiefe Verschachtelungen erschweren das Verständnis des Codes.
--        Beispiel: Verwende frühzeitige Rückkehr (RETURN) in Methoden, um tief verschachtelte IF-Anweisungen zu vermeiden.
+-        Vermeidung von tief verschachtelten Strukturen: Tiefe Verschachtelungen erschweren das Verständnis des Codes.  
+        Beispiel: Verwende frühzeitige Rückkehr (RETURN) in Methoden, um tief verschachtelte IF-Anweisungen zu vermeiden.
 
--        Kommentare und Dokumentation: Kommentare sollten genutzt werden, um komplexe Logik zu erläutern, aber nicht, um schlechten Code zu erklären.
--        Beispiel: Schreibe klare Kommentare für komplexe Algorithmen, vermeide aber Kommentare für Selbstverständlichkeiten.
+-        Kommentare und Dokumentation: Kommentare sollten genutzt werden, um komplexe Logik zu erläutern, aber nicht, um schlechten Code zu erklären.  
+        Beispiel: Schreibe klare Kommentare für komplexe Algorithmen, vermeide aber Kommentare für Selbstverständlichkeiten.
 
--        Effiziente Nutzung von SAP-spezifischen Sprachkonstrukten: ABAP bietet viele spezifische Konstrukte, die effizient genutzt werden sollten.
--        Beispiel: Verwende READ TABLE mit einer binären Suche, wenn möglich, anstelle einer linearen Suche.
+-        Effiziente Nutzung von SAP-spezifischen Sprachkonstrukten: ABAP bietet viele spezifische Konstrukte, die effizient genutzt werden sollten.  
+        Beispiel: Verwende READ TABLE mit einer binären Suche, wenn möglich, anstelle einer linearen Suche.
 
--        Vermeidung von Magic Numbers: Verwende Konstanten anstelle von direkten Zahlenwerten im Code.
--        Beispiel: Ersetze einen direkten Zahlenwert wie 3 durch eine Konstante mit einem beschreibenden Namen, z.B. MAX_RETRY_COUNT.
+-        Vermeidung von Magic Numbers: Verwende Konstanten anstelle von direkten Zahlenwerten im Code.  
+        Beispiel: Ersetze einen direkten Zahlenwert wie 3 durch eine Konstante mit einem beschreibenden Namen, z.B. MAX_RETRY_COUNT.
 
--        Fehlerbehandlung: Implementiere robuste Fehlerbehandlungsmechanismen.
--        Beispiel: Verwende Try-Catch-Blöcke, um Ausnahmen zu behandeln und sinnvolle Fehlermeldungen zurückzugeben.
+-        Fehlerbehandlung: Implementiere robuste Fehlerbehandlungsmechanismen.  
+        Beispiel: Verwende Try-Catch-Blöcke, um Ausnahmen zu behandeln und sinnvolle Fehlermeldungen zurückzugeben.
 
 ## 5.2 Transportmanagement (Lukas)
 
