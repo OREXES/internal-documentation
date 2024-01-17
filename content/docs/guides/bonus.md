@@ -45,7 +45,7 @@ Für die Erstellung von sauberem und wartbarem ABAP-Code gibt es verschiedene Ri
 
 Die typische SAP-Landschaft besteht aus drei Systemebenen. Für die Systemsicherheit und die Qualitätssicherung wird die Verwendung der verschiedenen Systeme empfohlen. Die Systemlandschaft besteht aus dem Entwicklungssystem, dem Testsystem oder Qualitätssicherungssystem und dem Produktivsystem.
 
--        Entwicklungssystem (auch DEV abgekürzt): Auf dem Entwicklungssystem werden Entwicklungen und das Customizing vorgenommen  
+-  Entwicklungssystem (auch DEV abgekürzt): Auf dem Entwicklungssystem werden Entwicklungen und das Customizing vorgenommen  
 -        Qualitätssicherungssystem (Abkürzung: QAS): Hier werden die Geschäftsprozesse anhand realer Testdaten getestet  
 -        Produktivsystem (Abkürzung: PRD): Dieses System dient als Arbeitsmandant. Es wird vom Endanwender für das Tagesgeschäft genutzt
 
