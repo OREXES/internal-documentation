@@ -1,3 +1,4 @@
+
 {{ define "main" }}
 <section class="section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center">
@@ -6,13 +7,14 @@
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}guides/example-guide/" role="button">Get started</a>
+      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}guides/1.-einstieg/" role="button">Los geht's!</a>
       <!-- <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}guides/example-guide/" role="button">{{ i18n "get_started" }}</a> -->
       {{ .Content }}
     </div>
   </div>
 </section>
 {{ end }}
+
 
 {{ define "sidebar-prefooter" }}
   {{ if site.Params.doks.backgroundDots -}}
@@ -25,16 +27,16 @@
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-lg-5">
-          <h2 class="h4">Learn the basics</h2>
-          <p>Find your footing in the complex world of ABAP.</p>
+          <h2 class="h4">Lerne die Grundlagen</h2>
+          <p>Erarbeite dir eine solide Basis für deine Zukunft in der Programmierwelt.</p>
         </div>
         <div class="col-lg-5">
-          <h2 class="h4">Expand your knowledge</h2>
-          <p>Being familiar with the basics, learn advanced techniques for ABAP programming.</p>
+          <h2 class="h4">Vertiefe deine Kenntnisse</h2>
+          <p>Finde schnell und zugänglich Hilfestellungen zu komplexeren Problemen.</p>
         </div>
         <div class="col-lg-5">
-          <h2 class="h4">Refresh your fundamentals</h2>
-          <p>After having some experience, reconnect with what's important.</code>.</p>
+          <h2 class="h4">Teile dein Wissen!</h2>
+          <p>Erweitere unsere Wissensdatenbank und gib Feedback für bestehende Einträge.</code></p>
         </div>
       </div>
     </div>
@@ -47,10 +49,11 @@
 <section class="section section-md container-fluid bg-light">
   <div class="row justify-content-center text-center">
     <div class="col-lg-7">
-      <h2 class="mt-2">Start building with Doks today</h2>
+      <h2 class="mt-2">Entwickleronboarding</h2>
       <a class="btn btn-primary rounded-pill px-4 my-2" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}prologue/introduction/" role="button">{{ i18n "get-started" }}</a>
     </div>
   </div>
 </section>
 {{ end -}}
 {{ end }}
+
