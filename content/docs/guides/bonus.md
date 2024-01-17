@@ -9,7 +9,7 @@ weight: 817
 
 -        Für die Erstellung von sauberem und wartbarem ABAP-Code gibt es verschiedene Richtlinien und Best Practices, die sich an den Prinzipien von "Clean Code" orientieren. Hier sind einige Schlüsselregeln mit Beispielen:
 
--        Klare und aussagekräftige Benennung: Variablen, Methoden und Klassen sollten so benannt werden, dass sie ihre Funktion oder ihren\ 
+-        Klare und aussagekräftige Benennung: Variablen, Methoden und Klassen sollten so benannt werden, dass sie ihre Funktion oder ihren  
          Zweck klar beschreiben.  
          Beispiel: Verwende “kundenNummer” anstelle von knr für eine Variable, die eine Kundennummer darstellt.
 
