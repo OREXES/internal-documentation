@@ -69,7 +69,6 @@ Nachdem man auf den Sichern-Button klickt, wird der Funktionsbaustein angelegt u
 ### Einführung in die Entwicklung von Dynpros und Selection-Screens
 
 Defintion von Dynpros:
-
 Dynamische Programme (Dynpros) sind ein zentrales Konzept in SAP ABAP und dienen der Erstellung von interaktiven Benutzeroberflächen für SAP-Anwendungen. 
 Dynpros ermöglichen die Gestaltung von Bildschirmen, auf denen Benutzer mit dem SAP-System interagieren können. Diese Bildschirme enthalten verschiedene Elemente wie Eingabefelder, Auswahllisten, 
 Knöpfe und andere Steuerelemente, die dem Benutzer die Eingabe von Daten und die Navigation innerhalb der Anwendung ermöglichen.
