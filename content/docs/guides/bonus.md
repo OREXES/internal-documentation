@@ -15,6 +15,9 @@ Für die Erstellung von sauberem und wartbarem ABAP-Code gibt es verschiedene Ri
 -  Vermeidung von globalen Variablen: Globale Variablen sollten vermieden werden, da sie die Lesbarkeit und Wartbarkeit des Codes beeinträchtigen können.  
    Beispiel: Nutze lokale Variablen innerhalb von Funktionen oder Methoden anstatt globale Variablen.
 
+-  Vermeidung von globalen Variablen: Globale Variablen sollten vermieden werden, da sie die Lesbarkeit und Wartbarkeit des Codes beeinträchtigen können.  
+   Beispiel: Nutze lokale Variablen innerhalb von Funktionen oder Methoden anstatt globale Variablen.
+
 -  Einhaltung der SOLID-Prinzipien: Diese Prinzipien fördern unter anderem die Modularität und Wiederverwendbarkeit des Codes.  
    Beispiel: Implementiere das Single-Responsibility-Prinzip, indem du sicherstellst, dass jede Klasse oder Methode nur eine Aufgabe erfüllt.
 
