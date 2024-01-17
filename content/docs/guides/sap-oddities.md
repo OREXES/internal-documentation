@@ -11,26 +11,20 @@ weight: 812
 
 ### Was ist en Funktionsbaustein
 
-Ein **Funktionsbaustein** ist eines der wichtigsten ABAP-Objekte in SAP ERP bzw. SAP S/4HANA. Das SAP-System benutzt an zahlreichen Stellen Funktionsbausteine für die ordnungsgemäße Funktion des SAP-Systems. Ein Funktionsbaustein kapselt den ABAP-Code und ermöglicht somit eine Wiederverwendung an verschiedenen Stellen.
-
+Ein **Funktionsbaustein** ist eines der wichtigsten ABAP-Objekte in SAP ERP bzw. SAP S/4HANA. Das SAP-System benutzt an zahlreichen Stellen Funktionsbausteine für die ordnungsgemäße Funktion des SAP-Systems. Ein Funktionsbaustein kapselt den ABAP-Code und ermöglicht somit eine Wiederverwendung an verschiedenen Stellen.  
 Ein Funktionsbaustein ist eine programmübergreifende wiederverwendbare Prozedur, die man in Funktionsgruppen strukturiert. Die wichtigste Transaktion für Funktionsbausteine ist die **Transaktion SE37 (ABAP-Funktionsbausteine)**. In dieser Transaktion kann man einen Funktionsbaustein anzeigen, ändern, anlegen, löschen, prüfen, aktivieren und ausführen. Die Transaktion SE37 ist sicherlich die Transaktion, wenn man Funktionsbausteine pflegen möchte.
 
 <!-- ![Ein Bild, das Text, Screenshot, Schrift, Zahl enthält. -->
 <!-- Automatisch generierte Beschreibung](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image019.jpg) -->
 
-Alternativ kann man die Transaktion SE80 (Object Navigator) verwenden, um einen Funktionsbaustein zu pflegen.
-
+Alternativ kann man die Transaktion SE80 (Object Navigator) verwenden, um einen Funktionsbaustein zu pflegen.  
 Ein Funktionsbaustein kapselt einen ABAP-Code. Die Datenübergabe erfolgt über eine definierte Schnittstelle, die aus verschiedenen Parametern besteht. Folgende Parameterarten stehen dabei zur Verfügung:
 
-·        Import
-
-·        Export
-
-·        Changing
-
-·        Tabellen
-
-·        Ausnahmen
+- Import
+- Export
+- Changing
+- Tabellen
+- Ausnahmen
 
 **Import-Parameter** dienen dazu, beim Aufruf des Funktionsbausteins Werte bzw. Variablen an den Funktionsbaustein zu übergeben. Import-Parameter werden beim Aufruf mit dem Schlüsselwort EXPORTING übergeben. Man „exportiert“ sozusagen Werte an den Funktionsbaustein. Der Funktionsbaustein „importiert“ diese. Sie können als optional gekennzeichnet werden, damit sie beim Aufruf nicht mehr zwingen versorgt werden müssen.
 
