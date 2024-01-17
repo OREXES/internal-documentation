@@ -9,7 +9,7 @@ weight: 814
 
 ABAP
 
-|   |   |
+| Transatkion | Beschreibung |
 |---|---|
 |BAPI|BAPI Explorer|
 |CMOD|Erweiterungen|
