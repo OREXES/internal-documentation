@@ -7,28 +7,17 @@ weight: 810
 
 ## 2.1 Relationale Operatoren (Lukas)
 
-Relationale Operatoren, die zum Vergleich von zwei oder mehr Operanden eines beliebigen Datentyps verwendet werden.
-
-Relationale Operatoren und verbinden zwei oder mehr Operanden eines beliebigen Datentyps, um einen relationalen Ausdruck oder einen Vergleichsausdruck zu bilden. Das Ergebnis des relationalen Ausdrucks ist wahr oder falsch.
-
-Für bestimmte Datentypen gibt es zusätzliche relationale Operatoren. Der Prädikatsoperator "IS" qualifiziert einen Operanden.
-
-Wenn Operanden von unterschiedlicher Länge und unterschiedlichem Typ sind, wird eine automatische Konvertierung durchgeführt.
-
-Die automatische Typkonvertierung wird für einen der beiden Operanden durchgeführt. Die automatische Konvertierung kann durch den Datentyp bestimmt werden, und die folgende Liste zeigt den Vorrang der Datentypen.
-
-Wenn ein Operand vom Datentyp I ist, dann wird der andere Operand in I konvertiert.
-
-Wenn ein Operand vom Datentyp P ist, dann wird der andere Operand nach P konvertiert.
-
-Wenn ein Operand vom Datentyp D ist, dann wird der andere Operand nach D konvertiert.
-
-Die Typen C und N werden nicht konvertiert und direkt verglichen.
-
-Ist ein Operand vom Datentyp N und der andere Operand vom Typ C oder X, werden beide Operanden nach P konvertiert.
-
-Ist ein Operand vom Datentyp C und der andere Operand vom Typ X, so wird der Typ X nach C konvertiert.
-
+Relationale Operatoren, die zum Vergleich von zwei oder mehr Operanden eines beliebigen Datentyps verwendet werden.  
+Relationale Operatoren und verbinden zwei oder mehr Operanden eines beliebigen Datentyps, um einen relationalen Ausdruck oder einen Vergleichsausdruck zu bilden. Das Ergebnis des relationalen Ausdrucks ist wahr oder falsch.  
+Für bestimmte Datentypen gibt es zusätzliche relationale Operatoren. Der Prädikatsoperator "IS" qualifiziert einen Operanden.  
+Wenn Operanden von unterschiedlicher Länge und unterschiedlichem Typ sind, wird eine automatische Konvertierung durchgeführt.  
+Die automatische Typkonvertierung wird für einen der beiden Operanden durchgeführt. Die automatische Konvertierung kann durch den Datentyp bestimmt werden, und die folgende Liste zeigt den Vorrang der Datentypen.  
+Wenn ein Operand vom Datentyp I ist, dann wird der andere Operand in I konvertiert.  
+Wenn ein Operand vom Datentyp P ist, dann wird der andere Operand nach P konvertiert.  
+Wenn ein Operand vom Datentyp D ist, dann wird der andere Operand nach D konvertiert.  
+Die Typen C und N werden nicht konvertiert und direkt verglichen.  
+Ist ein Operand vom Datentyp N und der andere Operand vom Typ C oder X, werden beide Operanden nach P konvertiert.  
+Ist ein Operand vom Datentyp C und der andere Operand vom Typ X, so wird der Typ X nach C konvertiert.  
 Nachfolgend die Tabelle der Binäre Vergleichsoperatoren:
 
 |**Operator**|**Beschreibung**|**Bedeutung**|
@@ -42,7 +31,7 @@ Nachfolgend die Tabelle der Binäre Vergleichsoperatoren:
 |**<=, LE**|Weniger gleich|Wahr, wenn der Wert von Operand1 kleiner oder gleich ist als der Wert von Operand2, sonst falsch.|
 |>= GE|Größer gleich|Wahr, wenn der Wert von Operand1 größer oder gleich ist als der Wert von Operand2, sonst falsch.|
 
-  Nachfolgend die Tabelle der Vergleichsoperatoren für zeichenartige Datentypen:
+Nachfolgend die Tabelle der Vergleichsoperatoren für zeichenartige Datentypen:
 
 |**Operator**|**Beschreibung**|**Bedeutung**|
 |---|---|---|
@@ -57,8 +46,7 @@ Nachfolgend die Tabelle der Binäre Vergleichsoperatoren:
 
 ## 2.2 Open-SQL
 ### Syntax
-Variablen müssen mit einem Fluchtsymbol @ gekennzeichnet werden.
-
+Variablen müssen mit einem Fluchtsymbol `@` gekennzeichnet werden.  
 ```abap
 SELECT carrid, connid
        FROM sflight
@@ -90,63 +78,52 @@ Die Optimierung von OpenSQL-Anweisungen in ABAP für bessere Performance ist bes
 
 ### Selektive Datenabfrage
 
-Beschränke die abgefragten Daten auf das Notwendige. Verwende die `WHERE`-Klausel, um die Datenmenge zu reduzieren.
-
-Beispiel:
-Schlecht: `SELECT * FROM mara INTO TABLE @data(mara_tab).`
-
-Besser: `SELECT matnr, mtart FROM mara INTO TABLE @data(mara_tab) WHERE mtart = 'FERT'.`
+Beschränke die abgefragten Daten auf das Notwendige. Verwende die `WHERE`-Klausel, um die Datenmenge zu reduzieren.  
+Beispiel:  
+Schlecht: ```abap SELECT * FROM mara INTO TABLE @data(mara_tab).```  
+Besser: ```abap SELECT matnr, mtart FROM mara INTO TABLE @data(mara_tab) WHERE mtart = 'FERT'.```
 
 ### Indizes nutzen
 
-Orientiere die `WHERE`-Klausel an den Indizes der Datenbanktabelle, um die Abfrage zu beschleunigen.
-
-Beispiel:
+Orientiere die `WHERE`-Klausel an den Indizes der Datenbanktabelle, um die Abfrage zu beschleunigen.  
+Beispiel:  
 `SELECT * FROM vbak INTO TABLE @data(vbak_tab) WHERE vkorg = @vkorg AND vtweg = @vtweg.`
 
 ### Vermeidung von SELECT
-Wähle nur die benötigten Spalten statt SELECT *, um die Datenmenge zu minimieren.
-
-Beispiel:
-Schlecht: `SELECT * FROM kna1 INTO TABLE @data(kna1_tab).`
-Besser: `SELECT kunnr, name1 FROM kna1 INTO TABLE @data(kna1_tab).`
+Wähle nur die benötigten Spalten statt `SELECT *`, um die Datenmenge zu minimieren.  
+Beispiel:  
+Schlecht: ```abap SELECT * FROM kna1 INTO TABLE @data(kna1_tab).```
+Besser: ```abap SELECT kunnr, name1 FROM kna1 INTO TABLE @data(kna1_tab).```
 
 ### Joins effizient nutzen
 
-Verwende Joins statt mehrerer einzelner SELECT-Statements, um verwandte Daten aus mehreren Tabellen zu kombinieren.
-
-Beispiel:
+Verwende Joins statt mehrerer einzelner SELECT-Statements, um verwandte Daten aus mehreren Tabellen zu kombinieren.  
+Beispiel:  
 ```abap
 SELECT a~matnr, b~maktx FROM mara AS a INNER JOIN makt AS b ON a~matnr = b~matnr INTO TABLE @data(joined_data) WHERE b~spras = 'DE'.`
 ```
 ### FOR ALL ENTRIES vermeiden
 
-Wenn möglich, vermeide `FOR ALL ENTRIES`, da es ineffizient sein kann, insbesondere bei großen Datenmengen.
-
-Beispiel:
-
+Wenn möglich, vermeide `FOR ALL ENTRIES`, da es ineffizient sein kann, insbesondere bei großen Datenmengen.  
+Beispiel:  
 Statt `FOR ALL ENTRIES`, besser `JOIN` oder `WHERE ... IN (SELECT ...)`
 
 ### Aggregatfunktionen nutzen
 
-Nutze Aggregatfunktionen (wie `SUM`, `MAX`, `MIN`) in deinen Abfragen, um Berechnungen auf der Datenbankebene durchzuführen, statt große Datenmengen in ABAP zu laden und dort zu verarbeiten.
-
-Beispiel:
+Nutze Aggregatfunktionen (wie `SUM`, `MAX`, `MIN`) in deinen Abfragen, um Berechnungen auf der Datenbankebene durchzuführen, statt große Datenmengen in ABAP zu laden und dort zu verarbeiten.  
+Beispiel:  
 ```abap
 SELECT MAX(netwr) INTO @data(max_netwr) FROM vbrk.
 ```
 ### Vermeidung von SELECT DISTINCT
 
-`SELECT DISTINCT` kann Performance-Probleme verursachen, wenn es nicht notwendig ist. Prüfe, ob es wirklich benötigt wird.
-
-Beispiel:
-
+`SELECT DISTINCT` kann Performance-Probleme verursachen, wenn es nicht notwendig ist. Prüfe, ob es wirklich benötigt wird.  
+Beispiel:  
 Statt `SELECT DISTINCT`, besser die Datenmodellierung prüfen und optimieren.
 
 ### Verwendung von Cursor
 
-Bei Verarbeitung großer Datenmengen können Cursor verwendet werden, um den Speicherverbrauch zu minimieren.
-
+Bei Verarbeitung großer Datenmengen können Cursor verwendet werden, um den Speicherverbrauch zu minimieren.  
 Beispiel:
 ```abap
 OPEN CURSOR WITH HOLD FOR SELECT ...
@@ -155,9 +132,8 @@ FETCH NEXT CURSOR ... INTO ...
 ```
 ### Limitierung der Ergebnismenge
 
-Beschränke die Anzahl der zurückgegebenen Zeilen, insbesondere bei Abfragen zu Analysezwecken oder in Benutzeroberflächen.
-
-Beispiel:
+Beschränke die Anzahl der zurückgegebenen Zeilen, insbesondere bei Abfragen zu Analysezwecken oder in Benutzeroberflächen.  
+Beispiel:  
 ```abap
 SELECT ... INTO TABLE @data(...) UP TO 10 ROWS.
 ```
@@ -181,7 +157,7 @@ ENDIF.
 ```
 ### Check Abfragen
 
-`CHECK` ist eine Kombination aus `IF` und `CONTINUE`. Die Nachfolgenden Befehle werden nur ausgeführt, wenn die Bedingung erfüllt ist. Andernfalls wird der Anweisungsblock verlassen.
+`CHECK` ist eine Kombination aus `IF` und `CONTINUE`. Die Nachfolgenden Befehle werden nur ausgeführt, wenn die Bedingung erfüllt ist. Andernfalls wird der Anweisungsblock verlassen.  
 ```abap
 CHECK Bedingung.
 ```
@@ -245,8 +221,8 @@ ENDLOOP.
 ```
 ### Return, continue, exit, leave program,
 
-`RETURN` beendet den aktuellen Verarbeitungsblock an jeder beliebigen Stelle im Programm.
-`EXIT` beendet die komplette Schleife.
+`RETURN` beendet den aktuellen Verarbeitungsblock an jeder beliebigen Stelle im Programm.  
+`EXIT` beendet die komplette Schleife.  
 ```abap
 DO 24 TIMES.
 
@@ -260,7 +236,7 @@ DO 24 TIMES.
 
 ENDDO.
 ```
-Mit der `CONTINUE` Anweisung kann ein Anweisungsblock einer Schleife vorzeitig verlassen werden.
+Mit der `CONTINUE` Anweisung kann ein Anweisungsblock einer Schleife vorzeitig verlassen werden.  
 ```abap
 IF Bedingung_1.
 
@@ -307,7 +283,7 @@ Die Definition einer Klasse kann entweder lokal in der Workbench oder global erf
   Mit der Vererbung werden, wie bereits im Begriff enthalten, die Funktionen, Attribute etc. einer bestehenden Klasse an eine neue Klasse weiterzugeben. Diese neue Klasse dient dann als Erweiterungsklasse der ursprünglichen. Manchmal wird der Begriff Superklasse für die vererbende und Subklasse für die erhaltende 
   Klasse verwendet. Zweck dieses Konzeptes ist es, dass keine Redundanz entsteht und die Bestandteile effizient wiederverwendet werden. Ist es notwendig, dass eine Methode anzupassen, kann dies durch eine Redefintion durchgeführt werden.
 
-Erstellung einer lokalen Klasse  
+**Erstellung einer lokalen Klasse**  
 Die lokale Implementierung findet in der Workbench statt. Um in ABAP eine Klasse zu definieren, muss ein Definitions- und ein Implementierungsteil erstellt werden.  
 In der Definition werden die Attribute, Methoden, ihre Eigenschaften und Schnittstellen festgelegt. Jedoch keine Ablauflogik, diese wird erst im Implementierungsabschnitt durchgeführt.
 
@@ -384,7 +360,7 @@ ENDCLASS.
 ```
 In der Implementierung der Klasse wird nun die Logik festgelegt. Besonders zu beachten ist es, dass der restliche ABAP-Code zwischen Definition und Implementierung geschrieben wird.
 
-Erstellung einer globalen Klasse  
+**Erstellung einer globalen Klasse**  
 Die globale Erstellung findet der Transaktion SE24 (Class Builder) statt. Hier kann die Klasse wie eine Tabelle oder Struktur analog der SE11 zum Beispiel definiert werden. Über einen Button kann dann die Workbench geöffnet werden, um die Funktionen mit ABAP zu implementieren.
 
 Definition
