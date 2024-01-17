@@ -32,23 +32,23 @@ SAP R/1 besteht aus einer 1-Tier Architektur, bei der die Präsentation, Logik u
 Die Darauffolgende Lösung SAP ERP/ ECC wurde durch SAP S/4HANA ab 2015 abgelöst. SAP S/4HANA basiert auf der performanten und leistungsstarken HANA-Datenbank. SAP Fiori und die Cloudedition der SAP S/4HANA werden folgend veröffentlicht und bieten mehr Flexibilität durch On-Premise- und Cloudlösungen.
 
 ### SAP Module und ihre Funktion
-SAP ist in sogenannte Module untergliedert, die die verschiedenen Geschäftsbereiche eines Unternehmens abbilden. Einige Kernmodule sind:
-·       **SAP Foundation Modul**
-	Dieses Modul bietet einen allgemeinen Überblick
-·       **CO**
-	Beim _Controlling_ handgelt es sich um die Planung und Überwachung von Kosten.
-·       **FI**
-	Das _Financial Accounting_ beschäftigt sich mit Finanzberichterstattung und Buchhaltung.
-·       **MM**
-	Das _Materials Management_ beinhaltet die Planung, Steuerung und Optimierung der Materialflüsse eines Unternehmens.
-·       **SD**
-	In dem Modul _Sales and Distribution_ wird der Vertrieb von der Erstellung von Anfragen und Angeboten bis hin zum Versand und der Fakturierung abgebildet.
-·       **PP**
-	Das _Production Planning_ unterstützt die zeitliche und räumliche Planung der Produktion.
-·       **HCM**
-	Das _Human Capital Management_ umfasst die Personalwirtschaft.
-·       **CRM**
-	Mit dem _Customer-Relationship-Management_ können Kundendaten und kundenorientierten Aktivitäten automatisiert und integriert verarbeitet werden.
+SAP ist in sogenannte Module untergliedert, die die verschiedenen Geschäftsbereiche eines Unternehmens abbilden. Einige Kernmodule sind:  
+- **SAP Foundation Modul**  
+  Dieses Modul bietet einen allgemeinen Überblick
+- **CO**  
+  Beim _Controlling_ handgelt es sich um die Planung und Überwachung von Kosten.
+- **FI**  
+  Das _Financial Accounting_ beschäftigt sich mit Finanzberichterstattung und Buchhaltung.
+- **MM**  
+  Das _Materials Management_ beinhaltet die Planung, Steuerung und Optimierung der Materialflüsse eines Unternehmens.
+- **SD**  
+  In dem Modul _Sales and Distribution_ wird der Vertrieb von der Erstellung von Anfragen und Angeboten bis hin zum Versand und der Fakturierung abgebildet.
+- **PP**  
+  Das _Production Planning_ unterstützt die zeitliche und räumliche Planung der Produktion.
+- **HCM**  
+  Das _Human Capital Management_ umfasst die Personalwirtschaft.
+- **CRM**  
+  Mit dem _Customer-Relationship-Management_ können Kundendaten und kundenorientierten Aktivitäten automatisiert und integriert verarbeitet werden.
 
 ## 1.2 Hello World
 ### Einführung in das ABAP Entwicklungsumfeld
