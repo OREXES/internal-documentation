@@ -54,7 +54,7 @@ SAP ist in sogenannte Module untergliedert, die die verschiedenen Geschäftsbere
 ### Einführung in das ABAP Entwicklungsumfeld
 Das ABAP-Entwicklungsumgebung öffnet sich über den _Object Navigator_ mit der Transaktion SE80.
 ![Pasted image 20240109154156.png]]
-w4ier können die Entwicklungsobjekte im _Repository Browser_ angelegt, geändert und angesehen werden.
+Hier können die Entwicklungsobjekte im _Repository Browser_ angelegt, geändert und angesehen werden.
 ![Pasted image 20240109154211.png]]
 Das Objekt mit der höchsten Hierarchieebene ist das _Paket_. Ein _Paket_ dient der Sammlung zusammengehöriger Entwicklungen. Alle erstellen Objekte müssen mit dem Buchstaben Z beginnen, das ist der Namensraum, der außerhalb der SAP-Standardentwicklungen liegt. Als Beispiel, das Hauptpaket ZOM (kundeneigens erstellt) dient der Sammlung aller Entwicklungen des Organisationsmanagements.
 ![Pasted image 20240109154223.png]]
