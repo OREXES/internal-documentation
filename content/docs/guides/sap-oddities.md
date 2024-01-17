@@ -255,8 +255,7 @@ Der Debugger ermöglicht zur Laufzeit eine Codeanalyse von ABAP-Programmen, Funk
 <!-- ![Ein Bild, das Text, Screenshot, Software, Computersymbol enthält. -->
 <!-- Automatisch generierte Beschreibung](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image042.jpg) -->
 
-In der Standardsicht ist der Debugger in drei Teile aufgeteilt: Links (1) sieht man den Quelltext, der gerade durchlaufen wird. Rechts oben (2) ist der sogenannte Aufrufstack zu sehen. Dies ist eine hierarchische Auflistung der Programmteile, Methoden oder Funktionsbausteine, die bereits durchlaufen wurden. Unter dem Aufrufstack (3) können Variablen, Tabellen, etc. angezeigt werden. Diese können entweder eingetragen oder durch einen Doppelklick im Quelltext geladen werden.
-
+In der Standardsicht ist der Debugger in drei Teile aufgeteilt: Links (1) sieht man den Quelltext, der gerade durchlaufen wird. Rechts oben (2) ist der sogenannte Aufrufstack zu sehen. Dies ist eine hierarchische Auflistung der Programmteile, Methoden oder Funktionsbausteine, die bereits durchlaufen wurden. Unter dem Aufrufstack (3) können Variablen, Tabellen, etc. angezeigt werden. Diese können entweder eingetragen oder durch einen Doppelklick im Quelltext geladen werden.  
 Mit den folgenden Buttons kann durch das Programm debuggen:
 
   
@@ -264,32 +263,21 @@ Mit den folgenden Buttons kann durch das Programm debuggen:
 
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image045.png) -->
 
-·        **Einzelschritt (F5)**: _springt_ einen _Schritt_ weiter, also von Anweisung zu Anweisung
-
-·        **Ausführen (F6)**: _überspringt_ Funktionsbaustein, Methoden, Unterprogramme, etc.; diese Programmteile werden aber trotzdem durchlaufen; man bleibt auf derselben Ebene des Aufrufstacks
-
-·        **Return (F7)**: _verlässt_ den aktuellen Programmteil; auch werden nachfolgende Programmteile noch durchlaufen
-
-·        **Weiter (F8)**: _verlässt_ den Debugger; Programmteile werden aber noch durchlaufen
+- **Einzelschritt (F5)**: _springt_ einen _Schritt_ weiter, also von Anweisung zu Anweisung
+- **Ausführen (F6)**: _überspringt_ Funktionsbaustein, Methoden, Unterprogramme, etc.; diese Programmteile werden aber trotzdem durchlaufen; man bleibt auf derselben Ebene des Aufrufstacks
+- **Return (F7)**: _verlässt_ den aktuellen Programmteil; auch werden nachfolgende Programmteile noch durchlaufen
+- **Weiter (F8)**: _verlässt_ den Debugger; Programmteile werden aber noch durchlaufen
 
 ### Breakpoints
 
-Es gibt verschiedene Möglichkeiten bei der Programmausführung in den Debugger zu wechseln
+Es gibt verschiedene Möglichkeiten bei der Programmausführung in den Debugger zu wechseln:  
+- "/h" im Kommandofenster eingeben. Der Debugger wird sofort am Anfang des Programms ausgeführt. Empfehlenswert, wenn das Programm vom Programmstart an debuggt werden soll.
+- "/hs" im Kommandofenster eingeben. Der Debugger wird sofort am Anfang des Programms gestartet, inklusive der Programmteile, die den Status "Systemprogramm" haben. Das Systemdebugging ist normalerweise nicht notwendig. Wenn jedoch ein Programm debuggt werden soll, was den Status "Systemprogramm" hat, dann macht dieser Debuggingmodus Sinn.
 
-·       "/h" im Kommandofenster eingeben. Der Debugger wird sofort am Anfang des Programms ausgeführt. Empfehlenswert, wenn das Programm vom Programmstart an debuggt werden soll.  
-  
-
-·       "/hs" im Kommandofenster eingeben. Der Debugger wird sofort am Anfang des Programms gestartet, inklusive der Programmteile, die den Status "Systemprogramm" haben. Das Systemdebugging ist normalerweise nicht notwendig. Wenn jedoch ein Programm debuggt werden soll, was den Status "Systemprogramm" hat, dann macht dieser Debuggingmodus Sinn.
-
-Eine weitere Möglichkeit den Debugger aufzurufen ist via das Kommando _„break“_
-
-·       _„break <benutzername>“_ im Coding schreiben. Das Programm stoppt nur beim SAP-Benutzer <benutzername>. Empfehlenswert, wenn das Programm an einer bestimmten Stelle in den Debugger springen soll und man selbst das Programm debuggen will. Hier ist es auch meist unproblematisch, wenn man vergisst den Breakpoint bei einem Transport zu löschen, da bei anderen SAP-Usern der Sprung in den Debugger nicht erfolgt.  
-  
-
-·       _„break-point“_. Hier springt das Programm bei jedem SAP-Benutzer mit Debuggerberechtigung in den Debugger. Es ist dringend zu empfehlen diesen Befehl nur mit Vorsicht zu nutzen. Es ist unangenehm und wirkt unprofessionell, wenn im Qualitäts- oder Produktivsystem andere Benutzer oder gar der Fachwender mit Debuggerberechtigung ungewollt in den Debugger springen. Hier ist z. B. "break <benutzername> vorzuziehen. Vor jedem Transport ins Qualitätssystem und besonders in Produktivsystem sollte das Code um diese Breakpoints „break-point“ bereinigt werden. Noch besser ist es sie gar nicht zu verwenden. Dann kann es auch nicht vergessen werden sie zu löschen.  
-  
-
-·       _“Break-point id <Checkpoint-Gruppe>”_ In der Transaktion SAAB kann man Checkpoint-Gruppen definieren. Im Coding kann man auf diese Checkpoint-Gruppe verweisen. In der Transaktion SAAB kann man dann für diese Checkpoint-Gruppe einstellen, ob dieser dynamische Break-Point an dem Tag aktiv sein soll. Das Programm spring dann für den eigenen User an dem heutigen Datum in dem aktuellen System in den Debugger, sofern die Debugging-Berechtigung vorhanden ist. Ganz praktisch ist es auch, dass SAP viele Checkpoint-Gruppen angelegt hat, die man selbst auch im Qualitäts- oder Produktiv-System aktivieren kann.
+Eine weitere Möglichkeit den Debugger aufzurufen ist via das Kommando `break`  
+- `break <benutzername>` im Coding schreiben. Das Programm stoppt nur beim SAP-Benutzer <benutzername>. Empfehlenswert, wenn das Programm an einer bestimmten Stelle in den Debugger springen soll und man selbst das Programm debuggen will. Hier ist es auch meist unproblematisch, wenn man vergisst den Breakpoint bei einem Transport zu löschen, da bei anderen SAP-Usern der Sprung in den Debugger nicht erfolgt.   
+- `break-point` Hier springt das Programm bei jedem SAP-Benutzer mit Debuggerberechtigung in den Debugger. Es ist dringend zu empfehlen diesen Befehl nur mit Vorsicht zu nutzen. Es ist unangenehm und wirkt unprofessionell, wenn im Qualitäts- oder Produktivsystem andere Benutzer oder gar der Fachwender mit Debuggerberechtigung ungewollt in den Debugger springen. Hier ist z. B. "break <benutzername> vorzuziehen. Vor jedem Transport ins Qualitätssystem und besonders in Produktivsystem sollte das Code um diese Breakpoints „break-point“ bereinigt werden. Noch besser ist es sie gar nicht zu verwenden. Dann kann es auch nicht vergessen werden sie zu löschen.  
+- `Break-point id <Checkpoint-Gruppe>` In der Transaktion SAAB kann man Checkpoint-Gruppen definieren. Im Coding kann man auf diese Checkpoint-Gruppe verweisen. In der Transaktion SAAB kann man dann für diese Checkpoint-Gruppe einstellen, ob dieser dynamische Break-Point an dem Tag aktiv sein soll. Das Programm spring dann für den eigenen User an dem heutigen Datum in dem aktuellen System in den Debugger, sofern die Debugging-Berechtigung vorhanden ist. Ganz praktisch ist es auch, dass SAP viele Checkpoint-Gruppen angelegt hat, die man selbst auch im Qualitäts- oder Produktiv-System aktivieren kann.
 
 ### dynamische Breakpoints
 
@@ -313,9 +301,7 @@ Beim externen Debugging kommt eine weitere Breakpointart, _Externe Breakpoints_,
 <!-- Automatisch generierte Beschreibung](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image051.png) -->
 
 Dann kann man an die Stelle im Coding, die einen interessiert, einen externen Breakpoint setzen und noch bestimmen für welchen User der externe Breakpoint gelten soll -> beim nächsten Aufruf der entsprechenden Codingstelle durch den User, der in den Einstellungen hinterlegt ist, springt nun bei dir der Debugger auf.
-
-Der User für das externe Debugging wird in den Einstellungen wie folgt definiert:
-
+Der User für das externe Debugging wird in den Einstellungen wie folgt definiert:  
 In der Menüleiste des ABAP-Editors auf Hilfsmittel -> Einstellungen klicken; Reiter ABAP-Editor -> Debugging: Benutzer-Option aktivieren und den entsprechenden User setzen.
 
 ### Watchpoints
