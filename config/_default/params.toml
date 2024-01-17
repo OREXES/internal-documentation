@@ -116,7 +116,7 @@ mainSections = ["docs"]
   iconSetDir = "tabler-icons" # "tabler-icons" (default)
 
 [add_ons]
-    docSearch = true
+    docSearch = false
 
 
 # SEO (@hyas/seo)
