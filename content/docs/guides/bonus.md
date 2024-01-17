@@ -12,7 +12,7 @@ Für die Erstellung von sauberem und wartbarem ABAP-Code gibt es verschiedene Ri
 -  Klare und aussagekräftige Benennung: Variablen, Methoden und Klassen sollten so benannt werden, dass sie ihre Funktion oder ihren Zweck klar beschreiben.
           Beispiel: Verwende “kundenNummer” anstelle von knr für eine Variable, die eine Kundennummer darstellt.
 
--        Vermeidung von globalen Variablen: Globale Variablen sollten vermieden werden, da sie die Lesbarkeit und Wartbarkeit des Codes beeinträchtigen können.  
+-  Vermeidung von globalen Variablen: Globale Variablen sollten vermieden werden, da sie die Lesbarkeit und Wartbarkeit des Codes beeinträchtigen können.  
          Beispiel: Nutze lokale Variablen innerhalb von Funktionen oder Methoden anstatt globale Variablen.
 
 -        Einhaltung der SOLID-Prinzipien: Diese Prinzipien fördern unter anderem die Modularität und Wiederverwendbarkeit des Codes.  
