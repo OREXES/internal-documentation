@@ -73,6 +73,9 @@ WRITE: 'Hello World'.
 ```
 Der geschriebene Code kann mit der Tastenkombination `STRG + F2` auf Fehler überprüft, mit `STRG + F3` aktiviert und über `F8` oder jeweils die zugeordneten Buttons ausgeführt werden. Ein Programm kann nur im aktiviertem Zustand ausgeführt werden.
 
+
+
+
 Mit einem `*` können Kommentare geschrieben werden, die keinen Einfluss auf die Programmlogik haben und der Beschreibung der Anweisungen dienen.
 ```abap
 *dies ist ein Kommentar
@@ -82,6 +85,21 @@ Alternativ lassen sich Kommentare mit einem `"` beginnen und sind somit auch inl
 "dies ist ein Kommentar
 WRITE: 'Hello World'. "dies ist ein Inline-Kommentar
 ```
+
+<!-- 
+{{< tabs "abap-comment" >}}
+{{< tab "Default" >}}
+```abap
+*dies ist ein Kommentar
+```
+{{< /tab >}}
+{{< tab "Inline" >}}
+```abap
+"dies ist ein Kommentar
+WRITE: 'Hello World'. "dies ist ein Inline-Kommentar
+```
+{{< /tab >}}
+{{< /tabs >}} -->
 
 ### Datentypen
 
@@ -189,9 +207,7 @@ lv_strout = lv_str1 lv_str2.
 Auch das Zusammensetzen mit Trennzeichen ist möglich:
 ```abap
 CONCATENATE lv_str1 lv_str2
-
   INTO lv_strout
-
   SEPARATED BY SPACE.
 ```
 
@@ -220,7 +236,14 @@ lv_strtem = |Ergebnis: { methode( ) }|.
 ### **Aufgaben**
 1. Erzeuge eine Ausgabe, in der die ersten 3 Buchstaben des angemeldeten Benutzers mit dem aktuellen Monat und am Ende den Mandaten ermittelt und konkateniert werden. Im September würde bei dem Benutzer „MaxM“ im Mandaten 001 die Ausgabe also Max09001 lauten.
 2. Informiere dich über weitere String Operationen (bspw. [hier](https://otremba.net/wiki/Stringoperationen_(ABAP)))
-## 1.5 Strukturen und interne Tabellen (Simon)
+## 1.5 Strukturen und interne Tabellen
+
+
+{{< figure
+  src="images/se80-1.png"
+  alt="A yellow and black bird sitting on top of a body of water"
+  caption="A yellow and black bird sitting on top of a body of water. Photo by Vincent van Zalinge"
+>}}
 
 ### Strukturen und Strukturtypen
 Strukturen und Strukturtypen setzen sich aus beliebigen Datentypen zusammen. Sie können statisch oder dynamisch sein.

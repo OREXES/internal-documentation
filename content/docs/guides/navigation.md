@@ -5,7 +5,7 @@ summary: ""
 weight: 814
 ---
 
-## 4.1 SAP-Transaktionen für Entwickler (Simon + Lukas)
+## 4.1 SAP-Transaktionen für Entwickler 
 
 ABAP
 
@@ -76,7 +76,7 @@ Transportwesen
 |SPAU / SPDD|Modifizierte EU-Objekte|
 |STMS|Transport Management System|
 
-## 4.2 SE80 Deep Dive (Simon)
+## 4.2 SE80 Deep Dive 
 
 - Shortcuts  
   -  **F8**: Startet das ausgewählte Programm, den ausgewählten Funktionsbaustein oder die Klasse.  

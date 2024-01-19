@@ -5,7 +5,7 @@ summary: ""
 weight: 817
 ---
 
-## 5.1 Programmierstil (Simon)
+## 5.1 Programmierstil
 
 Für die Erstellung von sauberem und wartbarem ABAP-Code gibt es verschiedene Richtlinien und Best Practices, die sich an den Prinzipien von "Clean Code" orientieren. Hier sind einige Schlüsselregeln mit Beispielen:
   
@@ -36,7 +36,7 @@ Für die Erstellung von sauberem und wartbarem ABAP-Code gibt es verschiedene Ri
 -  **Fehlerbehandlung**: Implementiere robuste Fehlerbehandlungsmechanismen.  
    Beispiel: Verwende Try-Catch-Blöcke, um Ausnahmen zu behandeln und sinnvolle Fehlermeldungen zurückzugeben.
 
-## 5.2 Transportmanagement (Lukas)
+## 5.2 Transportmanagement 
 
 ### 5.2.1       Systemlandschaften
 

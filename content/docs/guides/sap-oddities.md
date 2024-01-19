@@ -5,9 +5,7 @@ summary: ""
 weight: 812
 ---
 
-# 3.    SAP-Besonderheiten
-
-## 3.1 Funktionsbausteine (Lukas)
+## 3.1 Funktionsbausteine 
 
 ### Was ist en Funktionsbaustein
 
@@ -238,7 +236,7 @@ Beispiel:
 CLEAR SCREEN.
 ```
 
-## 3.3 Debugging (Lukas)
+## 3.3 Debugging
 
 ### Grundlagen des Debuggings in ABAP
 
@@ -313,7 +311,7 @@ Der Vorteil der Bedingung ist das z.B. bei einer langen Schleife nicht mühsam j
 
 -        Fehlerbehebung, Breakpoints, Wertaustausch, dynamische Breakpoints, Watchpoints, Nutzerbreakpoints, etc.
 
-## 3.4 Lokale und globale Datentypen (Lukas)
+## 3.4 Lokale und globale Datentypen 
 
 -        Unterschied zwischen lokalen und globalen Datentypen in ABAP
 
@@ -323,7 +321,7 @@ Der Vorteil der Bedingung ist das z.B. bei einer langen Schleife nicht mühsam j
 
 -        Anlegen von lokalen und globalen Datentypen, Domänen, Tabellentypen, Strukturen
 
-## 3.5 SQL Advanced Techniques (Lukas)
+## 3.5 SQL Advanced Techniques 
 
 -        Joins, LIKE %, IN, Verwendung von dynamischen Typen
 

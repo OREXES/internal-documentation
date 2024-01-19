@@ -5,7 +5,7 @@ summary: ""
 weight: 810
 ---
 
-## 2.1 Relationale Operatoren (Lukas)
+## 2.1 Relationale Operatoren 
 
 Relationale Operatoren, die zum Vergleich von zwei oder mehr Operanden eines beliebigen Datentyps verwendet werden.  
 Relationale Operatoren und verbinden zwei oder mehr Operanden eines beliebigen Datentyps, um einen relationalen Ausdruck oder einen Vergleichsausdruck zu bilden. Das Ergebnis des relationalen Ausdrucks ist wahr oder falsch.  
@@ -141,7 +141,6 @@ Bei Verarbeitung großer Datenmengen können Cursor verwendet werden, um den Spe
 Beispiel:
 ```abap
 OPEN CURSOR WITH HOLD FOR SELECT ...
-
 FETCH NEXT CURSOR ... INTO ...
 ```
 ### Limitierung der Ergebnismenge
@@ -156,17 +155,11 @@ SELECT ... INTO TABLE @data(...) UP TO 10 ROWS.
 ### If-Else Abfragen
 ```abap
 IF Bedingung_1 AND Bedingung_2.
-
     * Anweisungsblock_1
-
 ELSEIF Bedingung.
-
     * Anweisungsblock_2
-
 ELSE.
-
     * Anweisungsblock_2
-
 ENDIF.
 ```
 ### Check Abfragen
@@ -178,31 +171,18 @@ CHECK Bedingung.
 ### Switches
 ```abap
 CASE sy-subrc.
-
 WHEN 0.
-
 *   Okay-Fall
-
 WRITE: / tz_netzwerktechnik,
-
 'Teilnehmer für den Kurs Netzwerktechnik
-
 gefunden'.
-
 WHEN 4.
-
 *   Fehlerfall
-
 WRITE: / 'keine Teilnehmer für den Kurs
-
 Netzwerktechnik gefunden'.
-
 WHEN OTHERS.
-
 *   Kann nicht sein, anderer sy-subrc wird von der
-
 *   Anweisung nicht geliefert.
-
 ENDCASE.
 ```
 ### Iteration
@@ -210,27 +190,20 @@ ENDCASE.
 **While-Schleife**
 ```abap
 WHILE sek > 0.
-
     WRITE: / sek.
-
     sek = sek - 1.
-
 ENDWHILE.
 ```
 **Do-Schleife**
 ```abap
 DO 24 TIMES.
-
 * Anweisungsblock_1
-
 ENDDO.
 ```
 **Loop-Schleife**
 ```abap
 LOOP AT itab ASSIGNING <field-symbol>.
-
 * Anweisungsblock_1
-
 ENDLOOP.
 ```
 ### Return, continue, exit, leave program,
@@ -239,28 +212,21 @@ ENDLOOP.
 `EXIT` beendet die komplette Schleife.  
 ```abap
 DO 24 TIMES.
-
     IF sy-index = 3.
-
       EXIT.
-
     ENDIF.
-
     ...
-
 ENDDO.
 ```
 Mit der `CONTINUE` Anweisung kann ein Anweisungsblock einer Schleife vorzeitig verlassen werden.  
 ```abap
 IF Bedingung_1.
-
     CONTINUE.
-
 ENDIF.
 ```
 Der `LEAVE PROGRAM` Befehl beendet das Programm.
 
-## 2.2 BADI (Lukas evtl. Colin)
+## 2.2 BADI 
 
 Einführung in Business Add-Ins (BADI)
 
@@ -304,28 +270,18 @@ In der Definition werden die Attribute, Methoden, ihre Eigenschaften und Schnitt
 Definition
 ```abap
 CLASS lcl_beispiel DEFINITION.  
-   
-  
   PUBLIC SECTION.  
-   
     _"Insanzattrbut_  
      DATA: lv_summe TYPE i.  
-   
     _"Statisches Attribut_  
      CLASS-DATA: lv_classdata TYPE string.  
-   
     _"Konstante_  
      CONSTANTS: lc_const TYPE i VALUE 10.  
-   
     METHODS:  
-   
       add IMPORTING iv_num1 TYPE i  
                      iv_num2 TYPE i.  
-   
-  
   PROTECTED SECTION.  
    PRIVATE SECTION.  
-   
 ENDCLASS.
 ```
 In der Definition werden die Kapselung, die Attribute, sowie die Methoden festgelegt. Wichtiger Punkt ist, dass hier noch keine Logik eingebaut wird.
@@ -334,42 +290,28 @@ Implementierung
 ```abap
 CLASS lcl_beispiel IMPLEMENTATION.  
   METHOD add.  
-   
     lv_summe = iv_num1 + iv_num2.  
-   ENDMETHOD.  
-   
+  ENDMETHOD.  
 ENDCLASS.
 ```
 Vererbung Defintion
 ```abap
 CLASS lcl_sub DEFINITION INHERITING FROM lcl_beispiel.  
-   
-  
   PUBLIC SECTION.  
-   
     METHODS:  
-   
       add IMPORTING iv_num1 TYPE i  
                      iv_num2 TYPE i REDEFINITION.  
-   
-  
   PROTECTED SECTION.  
-   PRIVATE SECTION.  
-   
+  PRIVATE SECTION.  
 ENDCLASS.
 ```
 Vererbung Implementation
 ```abap
 CLASS lcl_sub IMPLEMENTATION.
-
     METHOD add.
-
       DATA: sum TYPE i.
-
       sum = iv_num1 + iv_num2.
-
     ENDMETHOD.
-
 ENDCLASS.
 ```
 In der Implementierung der Klasse wird nun die Logik festgelegt. Besonders zu beachten ist es, dass der restliche ABAP-Code zwischen Definition und Implementierung geschrieben wird.
@@ -408,7 +350,7 @@ zcl_beispiel=>add(
 Zugriff auf eine Instance Methode
 ```abap
 DATA: lcl_class TYPE REF TO zcl_beispiel.  
- CREATE OBJECT lcl_class.  
+CREATE OBJECT lcl_class.  
    
 lcl_class->sub(  
    EXPORTING  
