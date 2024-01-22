@@ -313,11 +313,48 @@ Der Vorteil der Bedingung ist das z.B. bei einer langen Schleife nicht mühsam j
 
 ## 3.4 Lokale und globale Datentypen 
 
--        Unterschied zwischen lokalen und globalen Datentypen in ABAP
+Im ABAP Dictionary besteht die Möglichkeit, globale Datentypen zu definieren, die für sämtliche Repository-Objekte des aktuellen AS ABAP sichtbar sind und entsprechend genutzt werden können, sofern es das Paketkonzept zulässt.
 
--        Verwendung und Anwendung von Datentypen, dynamische Typen
+Die verfügbaren Datentypen im ABAP Dictionary umfassen:
 
--        Suchhilfen
+    Datenelemente für elementare Datentypen und Referenztypen
+    Strukturen, die sich aus beliebigen anderen Datentypen zusammensetzen
+    Tabellentypen mit beliebigen Zeilentypen
+
+In ABAP-Programmen kann über den TYPE-Zusatz in deklarativen Anweisungen auf die im ABAP Dictionary definierten Datentypen verwiesen werden. Dabei verhalten sich Datenelemente wie elementare ABAP-Typen, Strukturen wie strukturierte ABAP-Typen und Tabellentypen wie entsprechende ABAP-Typen. Die elementaren Komponenten jedes Datentyps im ABAP Dictionary basieren auf einem Satz eingebauter Typen des ABAP Dictionary, für die eine Zuordnung zu den eingebauten ABAP-Typen festgelegt ist. Bei einer Änderung eines Datentyps im ABAP Dictionary erfolgt automatisch eine Anpassung aller Verwender.
+
+Lokale Datentypen werden innerhalb von ABAP-Programmen definiert und dienen dazu, Variablen mit spezifischen Datentypen zu erstellen, ohne dabei den globalen Namensraum zu beeinflussen. Diese Datentypen können durch das Schlüsselwort "DATA" deklariert werden und ermöglichen die Definition von internen Tabellen, Strukturen, und anderen Datentypen, die ausschließlich innerhalb des jeweiligen Programms, Klasse oder Funktionsbausteins Gültigkeit haben. Die Verwendung von lokalen Datentypen trägt dazu bei, den Code übersichtlich zu gestalten, den Wartungsaufwand zu reduzieren und mögliche Konflikte mit globalen Variablen zu vermeiden. 
+
+
+### Dynamische Datentypen
+
+Dynamische Datentypen ermöglichen es, Variablen während der Laufzeit zu definieren und zu verarbeiten. Dies bietet mehr Flexibilität, da der Datentyp nicht statisch während der Entwicklungszeit festgelegt wird. Die ABAP-Sprache unterstützt dynamische Datentypen durch den Einsatz von "Datenreferenzen" und der Klasse CL_ABAP_DATADESCR.
+
+Hier ist ein einfaches Beispiel für die Verwendung dynamischer Datentypen in ABAP:
+```abap
+DATA: dynamic_variable TYPE REF TO data.
+
+FIELD-SYMBOLS: <fs_dynamic> TYPE ANY.
+
+* Dynamischen Datentyp erstellen
+CREATE DATA dynamic_variable TYPE 'STRING'.
+
+* Datenreferenz initialisieren
+ASSIGN dynamic_variable->* TO <fs_dynamic>.
+
+* Wert zuweisen
+<fs_dynamic> = 'Hello, Dynamic World!'.
+
+* Ausgabe
+WRITE: / 'Dynamic Value:', <fs_dynamic>.
+```
+
+In diesem Beispiel wird eine dynamische Variable (dynamic_variable) erstellt, die auf den Datentyp 'STRING' zeigt. Dann wird eine Datenreferenz (<fs_dynamic>) erstellt, die auf den dynamischen Datentyp zeigt. Schließlich wird ein Wert zugewiesen und ausgegeben.
+
+Es ist zu beachten, dass bei der Verwendung dynamischer Datentypen Vorsicht geboten ist, da dies zu Laufzeitfehlern führen kann, wenn die Datentypen nicht korrekt verarbeitet werden. Die Verwendung von dynamischen Datentypen sollte auf bestimmte Anwendungsfälle beschränkt werden, bei denen ein hohes Flexibilität erforderlich ist.
+
+### Suchhilfen
+
 
 -        Anlegen von lokalen und globalen Datentypen, Domänen, Tabellentypen, Strukturen
 
