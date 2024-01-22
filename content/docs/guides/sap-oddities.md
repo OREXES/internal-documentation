@@ -323,6 +323,20 @@ Die verfügbaren Datentypen im ABAP Dictionary umfassen:
 
 In ABAP-Programmen kann über den TYPE-Zusatz in deklarativen Anweisungen auf die im ABAP Dictionary definierten Datentypen verwiesen werden. Dabei verhalten sich Datenelemente wie elementare ABAP-Typen, Strukturen wie strukturierte ABAP-Typen und Tabellentypen wie entsprechende ABAP-Typen. Die elementaren Komponenten jedes Datentyps im ABAP Dictionary basieren auf einem Satz eingebauter Typen des ABAP Dictionary, für die eine Zuordnung zu den eingebauten ABAP-Typen festgelegt ist. Bei einer Änderung eines Datentyps im ABAP Dictionary erfolgt automatisch eine Anpassung aller Verwender.
 
+Anlegen von globalen Datentypen:
+
+Zuerst geht man in die Transaktion `se11`.
+
+{{< figure src="images/se11-1.png" alt="Einstiegsbild der Transaktion Se11" caption:"Einstiegsbild der Transaktion Se11" >}}
+
+Nun muss der Radio-Button `Datentyp` ausgewählt werden. Darauf muss nun der Name des Datentyp in das zugehörige Feld eingetragen werden. Der nächste Schritt wäre den Button `Anlegen` zu betätigen.
+Nun öffnet sich ein Pop-Up was abfragt was für ein Datentyp angelegt werden soll.
+
+{{< figure src="images/se11-2.png" alt="Fenster der Datentypauswahl der Se11" caption:"Fenster der Datentypauswahl der Se11" >}}
+
+Je nachdem was man nun auswählt unterscheidet sich das nachfolgende Fenster. 
+
+
 Lokale Datentypen werden innerhalb von ABAP-Programmen definiert und dienen dazu, Variablen mit spezifischen Datentypen zu erstellen, ohne dabei den globalen Namensraum zu beeinflussen. Diese Datentypen können durch das Schlüsselwort `DATA` deklariert werden und ermöglichen die Definition von internen Tabellen, Strukturen, und anderen Datentypen, die ausschließlich innerhalb des jeweiligen Programms, Klasse oder Funktionsbausteins Gültigkeit haben. Die Verwendung von lokalen Datentypen trägt dazu bei, den Code übersichtlich zu gestalten, den Wartungsaufwand zu reduzieren und mögliche Konflikte mit globalen Variablen zu vermeiden. 
 
 
