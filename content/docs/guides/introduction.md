@@ -241,8 +241,8 @@ lv_strtem = |Ergebnis: { methode( ) }|.
 
 {{< figure
   src="images/se80-1.png"
-  alt="A yellow and black bird sitting on top of a body of water"
-  caption="A yellow and black bird sitting on top of a body of water. Photo by Vincent van Zalinge"
+  alt="SAP Easy Access"
+  caption="SAP Easy Access"
 >}}
 
 ### Strukturen und Strukturtypen
