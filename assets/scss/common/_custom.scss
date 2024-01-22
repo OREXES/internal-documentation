@@ -1,0 +1,53 @@
+// Put your custom SCSS code here
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code');
+
+.navbar-brand {
+  font-family: "Fira Code", sans-serif;
+  font-size: calc(var(--doks-text-lg) + 1.5vw);
+}
+
+// h1 {
+//   font-family: "Fira Code", sans-serif;
+//   font-size: calc(var(--doks-text-lg) + 1.5vw);
+// }
+
+
+.feedback-links h3, .feedback-links .h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 1.25rem 0 0.75rem;
+  padding: 1.5rem 0 0;
+}
+
+.feedback-links li {
+  margin-top: 0.125rem;
+  padding-top: 0.125rem;
+}
+
+.feedback-links a {
+  color: $body-color;
+  display: block;
+  padding: 0.125rem 0;
+  font-size: $font-size-base * 0.9375;
+  text-decoration: none;
+}
+
+.feedback-links a:hover,
+.feedback-links a.active {
+  text-decoration: none;
+  color: $link-color;
+}
+
+@include color-mode(dark) {
+  .feedback-links a {
+    color: $body-color-dark;
+  }
+
+  .feedback-links a:hover {
+    text-decoration: none;
+    color: $link-color-dark;
+  }
+}
+
+
