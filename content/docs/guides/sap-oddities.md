@@ -336,6 +336,71 @@ Nun öffnet sich ein Pop-Up was abfragt was für ein Datentyp angelegt werden so
 
 Je nachdem was man nun auswählt unterscheidet sich das nachfolgende Fenster. 
 
+- Datenelement
+
+  {{< figure src="images/se11-2-dataelement.png" alt="Fenster der Datentypauswahl der Se11" caption:"Fenster der Datentypauswahl der Se11" >}}
+
+   #### Domäne (Domain)
+    Eine Domäne beschreibt wiederum den Datentyp und die zugehörigen Einschränkungen oder Regeln für die Verwendung dieses Datenelements festlegt.
+    Die Domäne besitzt folgende Eigenschaften und muss auch als Dictonary-Objekt angelegt werden. Hierbei müssen folgende Eigenschaften festgelegt werden:
+
+  ##### Datentyp (Data Type)
+  Die grundlegende Art der Daten, die das Datenelement repräsentiert. Beispiele für Datentypen sind i für Integer, c für Character, d für Datum usw.
+
+  ##### Länge (Length)
+  Die maximale Anzahl von Zeichen oder Bytes, die das Datenelement speichern kann. Die Länge hängt vom Datentyp ab.
+
+  ##### Dezimalstellen (Decimal Places)
+  Falls das Datenelement einen numerischen Datentyp hat, wie zum Beispiel p für Decimal, gibt die Anzahl der Dezimalstellen die Genauigkeit an.
+
+  ##### Währungsfeld (Currency Field)
+  Falls erforderlich, kann ein Datenelement als Währungsfeld markiert werden, um sicherzustellen, dass nur gültige Währungscodes zugewiesen werden können.
+
+  ##### Festwertliste (Fixed Value List)
+  Eine Liste von festen Werten, die das Datenelement annehmen kann. Dies wird verwendet, um die Gültigkeit der eingegebenen Daten einzuschränken.
+
+  ##### Referenz auf eine Domäne (Reference to a Domain)
+  Eine Domäne kann auf eine andere Domäne verweisen, was die Wiederverwendung von Definitionen ermöglicht.
+
+   #### Eingebauter Typ (Built-in Type)
+
+    Eingebaute Typen sind vordefinierte ABAP-Datentypen, die standardmäßig in der Sprache vorhanden sind.
+    Beispiele für eingebaute Typen sind i für Integer, c für Character, d für Datum usw.
+    Diese Typen sind bereits in ABAP definiert und können direkt verwendet werden, ohne sie zuvor selbst zu definieren.
+
+  #### Referenztyp (Reference Type):
+
+    Ein Referenztyp ist ein Datentyp, der auf Objekte zeigt oder auf eine Speicheradresse verweist.
+    In ABAP können Referenzen durch Verwendung von REF TO erstellt werden.
+    Referenzen werden verwendet, um auf Objekte zuzugreifen, die dynamisch während der Laufzeit erstellt werden, anstatt statisch während der Entwicklungszeit.
+
+- Struktur
+
+  {{< figure src="images/se11-2-structure.png" alt="Fenster der Datentypauswahl der Se11" caption:"Fenster der Datentypauswahl der Se11" >}}
+
+- Tabellentyp
+
+  {{< figure src="images/se11-tabletyp.png" alt="Fenster der Datentypauswahl der Se11" caption:"Fenster der Datentypauswahl der Se11" >}}
+
+  #### Zeilentyp (Line Type):
+
+    Der Zeilentyp wird für interne Tabellen verwendet.
+    Interne Tabellen sind spezielle Datenstrukturen in ABAP, die eine dynamische Tabelle von Datenzeilen darstellen.
+    Der Zeilentyp definiert die Struktur einer Zeile in der internen Tabelle.
+
+  #### Eingebauter Typ (Built-in Type):
+
+    Eingebaute Typen sind vordefinierte ABAP-Datentypen, die standardmäßig in der Sprache vorhanden sind.
+    Beispiele für eingebaute Typen sind i für Integer, c für Character, d für Datum usw.
+    Diese Typen sind bereits in ABAP definiert und können direkt verwendet werden, ohne sie zuvor selbst zu definieren.
+
+  #### Referenztyp (Reference Type):
+
+    Ein Referenztyp ist ein Datentyp, der auf Objekte zeigt oder auf eine Speicheradresse verweist.
+    In ABAP können Referenzen durch Verwendung von REF TO erstellt werden.
+    Referenzen werden verwendet, um auf Objekte zuzugreifen, die dynamisch während der Laufzeit erstellt werden, anstatt statisch während der Entwicklungszeit.
+
+Bei Datenelementen hat man drei Möglichkeiten einen Zeilentyp festzulegen: Der Zeilentyp, eingebauter Typ und Refernenztyp
 
 Lokale Datentypen werden innerhalb von ABAP-Programmen definiert und dienen dazu, Variablen mit spezifischen Datentypen zu erstellen, ohne dabei den globalen Namensraum zu beeinflussen. Diese Datentypen können durch das Schlüsselwort `DATA` deklariert werden und ermöglichen die Definition von internen Tabellen, Strukturen, und anderen Datentypen, die ausschließlich innerhalb des jeweiligen Programms, Klasse oder Funktionsbausteins Gültigkeit haben. Die Verwendung von lokalen Datentypen trägt dazu bei, den Code übersichtlich zu gestalten, den Wartungsaufwand zu reduzieren und mögliche Konflikte mit globalen Variablen zu vermeiden. 
 
@@ -369,8 +434,60 @@ Es ist zu beachten, dass bei der Verwendung dynamischer Datentypen Vorsicht gebo
 
 ### Suchhilfen
 
+Suchhilfen sind Objekte, die verwendet werden können, um Dynpro-Feldern eine Eingabehilfe (F4-Hilfe) zuzuordnen. Hierzu muss eine Suchhilfe im ABAP Dictionary anlegen und diese dann an das entsprechende Dynpro-Feld anbinden. Die Eingabehilfe (F4-Hilfe) ist eine Standardfunktion des SAP-Systems. 
 
--        Anlegen von lokalen und globalen Datentypen, Domänen, Tabellentypen, Strukturen
+Man geht in das ABAP Dictionary (SE11). Dann wählt man den Objekttyp "Suchhilfe" (Search Help) aus. Gib einen Namen für das Suchhilfenobjekt und ein Klicke auf "Anlegen". Danach wählt man den Radiobutten Elementare Suchilfe aus, am Ende des Punktes wird noch auf Sammelsuchhiflen eingegangen. Dann sollte das folgende Fenster zusehen sein:
+
+{{< figure src="images/se11-3-searchhelp.png" alt="Fenster der Datentypauswahl der Se11" caption:"Fenster der Datentypauswahl der Se11" >}}
+
+Die nächsten Schritte sehen wie folgt aus:
+
+#### Festlegung der Struktur der Suchhilfe:
+
+Füge Auswahlkriterien hinzu, indem du Felder für die Suche definierst.
+Füge Anzeigefelder hinzu, die dem Benutzer die Informationen zur Verfügung stellen, die er sehen soll.
+Du kannst auch Tabellen oder Views als Basis für die Suchhilfe verwenden.
+
+#### Festlegung der Anzeigefelder (Display Fields):
+
+Definiere die Felder, die in den Suchergebnissen angezeigt werden sollen.
+Die Anzeigefelder sollten relevante Informationen enthalten, um dem Benutzer die Auswahl zu erleichtern.
+
+#### Pflege der Suchhilfenattribute:
+
+Gehe zur Registerkarte "Attribute" und definiere spezifische Attribute für die Suchhilfe, wie z.B. das Erscheinungsbild, Sortierreihenfolge und weitere Optionen.
+
+#### Generierung und Aktivierung der Suchhilfe:
+
+Klicke auf "Generieren" und dann auf "Aktivieren", um die Suchhilfe zu erstellen und zu aktivieren.
+
+#### Integration der Suchhilfe in Programme:
+
+Du kannst die Suchhilfe in deinem ABAP-Programm durch CALL FUNCTION oder AT SELECTION-SCREEN on VALUE-REQUEST-Ereignisse integrieren.
+Verwende die Suchhilfe-Funktionen wie F4IF_INT_TABLE_VALUE_REQUEST, F4IF_FIELD_VALUE_REQUEST oder F4IF_VALUE_REQUEST, um die Suchhilfe aufzurufen.
+
+Hier ist ein einfaches Beispiel für die Integration einer Suchhilfe in einem ABAP-Programm:
+
+```abap
+DATA: gv_field TYPE fieldname,
+      gt_result TYPE TABLE OF your_data_structure.
+
+PARAMETERS: p_search TYPE gv_field OBLIGATORY.
+
+AT SELECTION-SCREEN ON VALUE-REQUEST FOR p_search.
+  CALL FUNCTION 'F4IF_INT_TABLE_VALUE_REQUEST'
+    EXPORTING
+      retfield        = 'P_SEARCH'
+      value_org       = 'S'
+    TABLES
+      value_tab       = gt_result
+      return_tab      = gt_result.
+```
+Stelle sicher, dass du die spezifischen Namen und Strukturen deiner Suchhilfe und deiner Daten verwenden. Diese Anleitung bietet nur eine grundlegende Übersicht über den Prozess der Erstellung von Suchhilfen in ABAP.
+
+#### Sammelsuchhilfen
+
+In ABAP (Advanced Business Application Programming) ist eine "Sammelsuchhilfe" (Collective Search Help) eine erweiterte Form der Suchhilfe, die es ermöglicht, mehrere Werte aus verschiedenen Suchhilfen zu sammeln und in einer gemeinsamen Liste anzuzeigen. Im Gegensatz zu einer einzelnen Suchhilfe erlaubt die Sammelsuchhilfe die gleichzeitige Auswahl von Werten aus verschiedenen Quellen.
 
 ## 3.5 SQL Advanced Techniques 
 
