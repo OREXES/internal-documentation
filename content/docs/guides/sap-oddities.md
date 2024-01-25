@@ -491,9 +491,79 @@ In ABAP (Advanced Business Application Programming) ist eine "Sammelsuchhilfe" (
 
 ## 3.5 SQL Advanced Techniques 
 
--        Joins, LIKE %, IN, Verwendung von dynamischen Typen
+-        Joins, LIKE %, IN
 
--        Dynamische Erstellung von Tabellen
+Bei ABAP SQL gibt es Besonderheiten bei oben geannten Operatoren.
+
+#### ABAP Joins: 
+ABAP bietet verschiedene Arten von Joins, um Daten aus verschiedenen Datenbanktabellen abzurufen und zu verarbeiten. Die gängigsten Joins sind ```abap INNER JOIN ```, ```abap LEFT OUTER JOIN ``` und ```abap RIGHT OUTER JOIN ```. Mit Joins können Daten aus mehreren Tabellen basierend auf gemeinsamen Schlüsselwerten zusammengeführt werden. Beispiel:
+
+```abap
+SELECT * FROM table1
+INNER JOIN table2 ON table1.field = table2.field
+INTO @DATA(result).
+```
+#### LIKE %: 
+Der LIKE-Operator in ABAP wird verwendet, um nach Zeichenketten zu suchen, die bestimmte Muster erfüllen. Das % wird als Platzhalter verwendet, um eine beliebige Anzahl von Zeichen zu repräsentieren. Beispiel:
+```abap
+SELECT * FROM table
+WHERE field LIKE '%pattern%'
+INTO @DATA(result).
+```
+In diesem Beispiel würde die Abfrage nach Zeichenketten suchen, die das Muster "pattern" enthalten, unabhängig von deren Position in der Zeichenkette.
+
+#### IN: 
+Der IN-Operator wird verwendet, um zu überprüfen, ob ein Wert in einer Liste von Werten vorhanden ist. Beispiel:
+```abap
+SELECT * FROM table
+WHERE field IN ('value1', 'value2', 'value3')
+INTO @DATA(result).
+```
+Diese Abfrage würde Datensätze zurückgeben, deren Feldwert in der angegebenen Liste enthalten ist.
+
+#### Dynamische Erstellung von Tabellen
+
+Die Erstellung von dynamische Tabellen kann direkt über die ABAP-Data Dictionary-Typen realisiert werden. Hier ist ein Beispiel:
+
+```abap
+DATA: lt_dynamic_table TYPE TABLE OF (iv_structure_name).
+
+* Dynamische Tabelle erstellen
+DATA: lt_components TYPE TABLE OF dd03l,
+      ls_component TYPE dd03l.
+
+* Strukturkomponenten abrufen
+CALL FUNCTION 'DDIF_FIELDINFO_GET'
+  EXPORTING
+    tabname              = iv_structure_name
+  TABLES
+    dfies_tab            = lt_components
+  EXCEPTIONS
+    not_found            = 1
+    internal_error       = 2
+    OTHERS               = 3.
+
+IF sy-subrc = 0.
+  LOOP AT lt_components INTO ls_component.
+    APPEND VALUE #( ls_component-fieldname ) TO lt_dynamic_table.
+  ENDLOOP.
+ELSE.
+  " Fehlerbehandlung
+ENDIF.
+
+* Daten in die dynamische Tabelle einfügen (als Beispiel)
+LOOP AT lt_dynamic_table INTO DATA(ls_line).
+  APPEND VALUE #( ls_line = 'Value' ) TO lt_dynamic_table.
+ENDLOOP.
+```
+In diesem Beispiel
+
+```abap lt_dynamic_table ``` ist die dynamische interne Tabelle, die zur Laufzeit erstellt wird. Der ```abab iv_structure_name ``` ist der Name der Struktur, die Sie verwenden möchten.
+```abap lt_components ``` wird verwendet, um die Komponenten der Struktur aus dem Data Dictionary abzurufen.
+Dann wird eine Schleife verwendet, um die Feldnamen in ```abab lt_dynamic_table ``` hinzuzufügen.
+Optional können Sie Daten in die Tabelle einfügen, wie im Beispiel gezeigt.
+
+Stellen Sie sicher, dass ```abap iv_structure_name ``` durch den tatsächlichen Namen Ihrer Struktur ersetzt wird. Dieser Ansatz ermöglicht es Ihnen, eine Tabelle mit unbekannter Struktur zur Laufzeit zu erstellen und mit Daten zu füllen.
 
 -        Dynamischer Aufruf von Funktionsbausteinen
 
