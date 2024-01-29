@@ -491,8 +491,6 @@ In ABAP (Advanced Business Application Programming) ist eine "Sammelsuchhilfe" (
 
 ## 3.5 SQL Advanced Techniques 
 
--        Joins, LIKE %, IN
-
 Bei ABAP SQL gibt es Besonderheiten bei oben geannten Operatoren.
 
 #### ABAP Joins: 
