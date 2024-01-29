@@ -565,11 +565,106 @@ Optional können Sie Daten in die Tabelle einfügen, wie im Beispiel gezeigt.
 
 Stellen Sie sicher, dass ```abap iv_structure_name ``` durch den tatsächlichen Namen Ihrer Struktur ersetzt wird. Dieser Ansatz ermöglicht es Ihnen, eine Tabelle mit unbekannter Struktur zur Laufzeit zu erstellen und mit Daten zu füllen.
 
--        Dynamischer Aufruf von Funktionsbausteinen
+### Dynamischer Aufruf von Funktionsbausteinen
 
--        Dynamische WHERE-Aufrufe
+In ABAP kann der dynamische Aufruf von Funktionsbausteinen mithilfe von Funktionen wie CALL FUNCTION und RFC_CALL_FUNCTION durchgeführt werden. Nachfolgend ist ein einfaches Beispiel für den dynamischen Aufruf eines Funktionsbausteins:
 
--        Wann welcher Tabellentyp (hashed, sorted, oder standard)
+```abap
+DATA: lv_function_name TYPE funcname,
+      lt_parameters    TYPE TABLE OF RFCDBST,
+      lt_export_parameters TYPE TABLE OF RFCDBST,
+      lt_import_parameters TYPE TABLE OF RFCDBST,
+      lt_exception      TYPE TABLE OF RFCDBST,
+      lv_result         TYPE any.
+
+* Funktionsbausteinname
+lv_function_name = 'RFC_PING'.
+
+* Parameter für den Funktionsbaustein
+APPEND VALUE #( 'PARAMETER_NAME' = 'VALUE' ) TO lt_parameters.
+
+* Aufruf des Funktionsbausteins
+CALL FUNCTION lv_function_name
+  EXPORTING
+    PARAMETERS = lt_parameters
+  IMPORTING
+    RESULT     = lv_result
+  EXCEPTIONS
+    SYSTEM_FAILURE        = 1
+    COMMUNICATION_FAILURE = 2
+    OTHERS                = 3.
+
+IF sy-subrc <> 0.
+  WRITE: / 'Fehler beim Aufruf des Funktionsbausteins:', lv_function_name.
+ELSE.
+  WRITE: / 'Ergebnis:', lv_result.
+ENDIF.
+```
+
+In diesem Beispiel wird der Funktionsbaustein RFC_PING aufgerufen, und es wird ein einzelner Parameter mit dem Namen PARAMETER_NAME und dem Wert VALUE übergeben.
+
+Wenn Sie den dynamischen Aufruf von Remote Function Calls (RFC) benötigen, können Sie die Funktion RFC_CALL_FUNCTION verwenden, die für die Kommunikation mit einem Remote-System geeignet ist.
+
+Es ist wichtig zu beachten, dass der dynamische Aufruf von Funktionsbausteinen mit Vorsicht verwendet werden sollte, da dies zu Laufzeitfehlern führen kann, wenn die erforderlichen Funktionsbausteine nicht existieren oder die Parameter nicht korrekt übergeben werden. Daher sollte eine gründliche Überprüfung und Handhabung von möglichen Fehlern im Code eingebaut werden.
+
+### Dynamische WHERE-Aufrufe
+
+In SAP wird die Erstellung einer dynamischen WHERE-Klausel in der Regel durch die Verwendung von dynamischem SQL oder Open SQL mit dynamischen Ausdrücken realisiert. Open SQL ist die natürliche SQL-Sprache, die in SAP ABAP verwendet wird. Hier ist ein einfaches Beispiel, wie eine dynamische WHERE-Klausel in einem ABAP-Programm erstellt werden kann:
+
+```abap
+DATA: lv_where_clause TYPE string,
+      lv_condition     TYPE string.
+
+* Setzen Sie Ihre dynamischen Bedingungen
+lv_condition = 'FELD1 = ''WERT1'' AND FELD2 = ''WERT2'''.
+
+* Konstruieren Sie die WHERE-Klausel
+CONCATENATE 'WHERE' lv_condition INTO lv_where_clause SEPARATED BY space.
+
+* Ihre SQL-Abfrage
+SELECT * FROM ihre_tabelle INTO TABLE ihre_ergebnistabelle WHERE (lv_where_clause).
+
+* Verarbeiten Sie das Ergebnis
+LOOP AT ihre_ergebnistabelle INTO DATA(ergebniszeile).
+  " Ihre Verarbeitungslogik hier
+ENDLOOP.
+```
+
+In diesem Beispiel repräsentiert lv_condition die dynamischen Bedingungen, die auf die WHERE-Klausel anwendendet wird. Diese Bedingung kann basierend auf Laufzeitwerten oder Benutzereingaben konstruiert werden. Die lv_where_clause wird dann durch die Verkettung der Bedingung mit dem Schlüsselwort WHERE konstruiert. Schließlich kann diese dynamische WHERE-Klausel in dem SQL-SELECT-Anweisung verwendet werden.
+
+Zu beachten ist, dass das Erstellen dynamischer SQL-Abfragen in Anwendung anfällig für SQL-Injektionsangriffe machen kann, wenn Benutzereingaben nicht ordnungsgemäß validiert und bereinigt werden. Validieren und bereinigen Sie immer Benutzereingaben, um Sicherheitslücken zu verhindern.
+
+Außerdem handelt es sich bei dem obigen Beispiel um eine vereinfachte Darstellung, und in einem realen Szenario müssen möglicherweise verschiedene Datentypen, Escape-Zeichen und andere Überlegungen je nach spezifischen Anforderungen berücksichtigt werden.
+
+### Wann welchen Tabellentyp verwenden(hashed, sorted, oder standard)
+
+In ABAP werden unterschiedliche Tabellentypen verwendet, um den Anforderungen verschiedener Szenarien gerecht zu werden. Die Entscheidung für einen bestimmten Tabellentyp hängt von den Anforderungen der Anwendung ab. Hier sind die drei Haupttypen von internen Tabellen in ABAP und einige Richtlinien für ihre Verwendung:
+
+- Standardtabelle (Standard Table):
+  
+  Verwendung: Verwendung, wenn die Datensätze in der Reihenfolge hinzugefügt wurden und die Reihenfolge beibehalten werden soll.
+  Implementierung: DATA: lt_standard TYPE TABLE OF ....
+  Beispiel: APPEND VALUE #(field1 = value1 field2 = value2) TO lt_standard.
+
+- Sortierte Tabelle (Sorted Table):
+  
+   Verwendung: Verwendung, wenn die Datensätze nach einer bestimmten Reihenfolge sortiert sein müssen.
+   Implementierung: DATA: lt_sorted TYPE SORTED TABLE OF ... WITH UNIQUE KEY ....
+   Beispiel: INSERT VALUE #(field1 = value1 field2 = value2) INTO TABLE lt_sorted.
+
+- Gehashte Tabelle (Hashed Table):
+  
+  Verwendung: Verwendung, wenn ein schneller Zugriff auf die Daten anhand eines eindeutigen Schlüssels erforderlich ist.
+  Implementierung: DATA: lt_hashed TYPE HASHED TABLE OF ... WITH UNIQUE KEY ....
+  Beispiel: lt_hashed[ key = value ] = value.
+
+Die Wahl des Tabellentyps hängt von den spezifischen Anforderungen Ihrer Anwendung ab:
+
+- Verwenden Sie eine Standardtabelle, wenn die Reihenfolge der Datensätze wichtig ist.
+- Verwenden Sie eine Sortierte Tabelle, wenn Sie nach einem Schlüssel sortierte Daten benötigen.
+- Verwenden Sie eine Gehashte Tabelle, wenn schnelle Zugriffe anhand eines eindeutigen Schlüssels erforderlich sind.
+
+Es ist wichtig zu beachten, dass der Zugriff auf gehashte Tabellen in der Regel schneller ist als auf sortierte Tabellen, aber die Sortierung der Daten bei Bedarf erschwert wird. Daher sollte die Wahl des Tabellentyps sorgfältig basierend auf den spezifischen Anforderungen der Anwendung getroffen werden.
 
 ## 3.6 Code Inspector und Prüfung (Simon)
 
