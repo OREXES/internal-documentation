@@ -150,7 +150,7 @@ Beispiel:
 ```abap
 SELECT ... INTO TABLE @data(...) UP TO 10 ROWS.
 ```
-## 2.3  Kontrollfluss (Simon)
+## 2.3  Kontrollfluss 
 
 ### If-Else Abfragen
 ```abap
@@ -251,7 +251,7 @@ Auswahl eines BaDI und oder Anlage eines Erweiterungsspots.
 
 <!-- ![](file:///C:/Users/SIMONF~1/AppData/Local/Temp/msohtmlclip1/01/clip_image010.png) -->
 
-## 2.3 Objektorientierte Programmierung (Colin)
+## 2.3 Objektorientierte Programmierung
 
 In ABAP gibt es die Möglichkeit Anwendung objektorientiert zu entwickeln. Grundlage bieten die Klassen und ihre Methoden. Eine Klasse ist wie die Blaupause der Anwendung zu sehen. Innerhalb der Methoden wird die Funktionalität der Klasse festgelegt. Hierzu kommen noch die Attribute. Diese können als Merkmale der Klasse bzw. Eigenschaften gesehen werden. Sie werden durch Variablen ausgeprägt.  
 Alle bekannten Paradigmen der Objektorientierung treten auch hier in Kraft, so ist möglich, durch die Verwendung der Kapselung, die Klassen zu schützen und Zugriff zu regeln.  

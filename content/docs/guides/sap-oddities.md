@@ -2,8 +2,24 @@
 title: "3. SAP Besonderheiten"
 description: "Besonderheiten in SAP Systemen"
 summary: ""
-weight: 812
+date: 2023-09-07T16:04:48+02:00
+lastmod: 2023-09-07T16:04:48+02:00
+draft: false
+menu:
+  docs:
+    parent: ""
+    identifier: "example-6a1a6be4373e933280d78ea53de6158e"
+weight: 830
+toc: true
+seo:
+  title: "" # custom title (optional)
+  description: "" # custom description (recommended)
+  canonical: "" # custom canonical URL (optional)
+  noindex: false # false (default) or true
 ---
+
+
+
 
 ## 3.1 Funktionsbausteine 
 
@@ -62,7 +78,7 @@ Nachdem man auf den Sichern-Button klickt, wird der Funktionsbaustein angelegt u
 
   
 
-## 3.2 Dynpro & Selection-Screens (GUI) (Joemar)
+## 3.2 Dynpro & Selection-Screens (GUI)
 
 ### Einführung in die Entwicklung von Dynpros und Selection-Screens
 
@@ -327,18 +343,18 @@ Anlegen von globalen Datentypen:
 
 Zuerst geht man in die Transaktion `se11`.
 
-{{< figure src="images/se11-1.png" alt="Einstiegsbild der Transaktion Se11" caption:"Einstiegsbild der Transaktion Se11" >}}
+{{< figure src="images/se11-1.png" alt="Einstiegsbild der Transaktion Se11" caption="Einstiegsbild der Transaktion Se11" >}}
 
 Nun muss der Radio-Button `Datentyp` ausgewählt werden. Darauf muss nun der Name des Datentyp in das zugehörige Feld eingetragen werden. Der nächste Schritt wäre den Button `Anlegen` zu betätigen.
 Nun öffnet sich ein Pop-Up was abfragt was für ein Datentyp angelegt werden soll.
 
-{{< figure src="images/se11-2.png" alt="Fenster der Datentypauswahl der Se11" caption:"Fenster der Datentypauswahl der Se11" >}}
+{{< figure src="images/se11-2.png" alt="Fenster der Datentypauswahl der Se11" caption="Fenster der Datentypauswahl der Se11" >}}
 
 Je nachdem was man nun auswählt unterscheidet sich das nachfolgende Fenster. 
 
 - Datenelement
 
-  {{< figure src="images/se11-2-dataelement.png" alt="Fenster der Datentypauswahl der Se11" caption:"Fenster der Datentypauswahl der Se11" >}}
+  {{< figure src="images/se11-2-dataelement.png" alt="Fenster der Datentypauswahl der Se11" caption="Fenster der Datentypauswahl der Se11" >}}
 
    #### Domäne (Domain)
     Eine Domäne beschreibt wiederum den Datentyp und die zugehörigen Einschränkungen oder Regeln für die Verwendung dieses Datenelements festlegt.
@@ -376,11 +392,11 @@ Je nachdem was man nun auswählt unterscheidet sich das nachfolgende Fenster.
 
 - Struktur
 
-  {{< figure src="images/se11-2-structure.png" alt="Fenster der Datentypauswahl der Se11" caption:"Fenster der Datentypauswahl der Se11" >}}
+  {{< figure src="images/se11-2-structure.png" alt="Fenster der Datentypauswahl der Se11" caption="Fenster der Datentypauswahl der Se11" >}}
 
 - Tabellentyp
 
-  {{< figure src="images/se11-tabletyp.png" alt="Fenster der Datentypauswahl der Se11" caption:"Fenster der Datentypauswahl der Se11" >}}
+  {{< figure src="images/se11-2-tabletyp.png" alt="Fenster der Datentypauswahl der Se11" caption="Fenster der Datentypauswahl der Se11" >}}
 
   #### Zeilentyp (Line Type):
 
@@ -438,7 +454,7 @@ Suchhilfen sind Objekte, die verwendet werden können, um Dynpro-Feldern eine Ei
 
 Man geht in das ABAP Dictionary (SE11). Dann wählt man den Objekttyp "Suchhilfe" (Search Help) aus. Gib einen Namen für das Suchhilfenobjekt und ein Klicke auf "Anlegen". Danach wählt man den Radiobutten Elementare Suchilfe aus, am Ende des Punktes wird noch auf Sammelsuchhiflen eingegangen. Dann sollte das folgende Fenster zusehen sein:
 
-{{< figure src="images/se11-3-searchhelp.png" alt="Fenster der Datentypauswahl der Se11" caption:"Fenster der Datentypauswahl der Se11" >}}
+{{< figure src="images/se11-3-searchhelp.png" alt="Fenster der Datentypauswahl der Se11" caption="Fenster der Datentypauswahl der Se11" >}}
 
 Die nächsten Schritte sehen wie folgt aus:
 
@@ -664,7 +680,7 @@ Die Wahl des Tabellentyps hängt von den spezifischen Anforderungen Ihrer Anwend
 
 Es ist wichtig zu beachten, dass der Zugriff auf gehashte Tabellen in der Regel schneller ist als auf sortierte Tabellen, aber die Sortierung der Daten bei Bedarf erschwert wird. Daher sollte die Wahl des Tabellentyps sorgfältig basierend auf den spezifischen Anforderungen der Anwendung getroffen werden.
 
-## 3.6 Code Inspector und Prüfung (Simon)
+## 3.6 Code Inspector und Prüfung
 
 -        Verwendung des Code-Inspectors mit Regeln
 

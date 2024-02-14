@@ -92,10 +92,6 @@ Nun kann durch das Markieren der jeweiligen Zeilen und das Verwenden der verschi
 
 -        Aufträge und Sperrung/Entsperrung
 
-Beteiligung: Colin, Joemar
-
-Review: Andreas, Johannes
-
 ---
 
  [[LS1]](#_msoanchor_1)Eventuell noch die verschiedenen Funktionen erklären

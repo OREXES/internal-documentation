@@ -11,7 +11,17 @@
 //   font-family: "Fira Code", sans-serif;
 //   font-size: calc(var(--doks-text-lg) + 1.5vw);
 // }
+figure {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain;
+}
 
+image {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain;
+}
 
 .feedback-links h3, .feedback-links .h3 {
   text-transform: uppercase;
