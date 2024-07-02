@@ -2,7 +2,7 @@
 title: "2. Programmstruktur"
 description: "Struktur von ABAP-Programmen"
 summary: ""
-weight: 810
+weight: 811
 ---
 
 ## 2.1 Relationale Operatoren 
