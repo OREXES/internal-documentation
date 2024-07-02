@@ -360,7 +360,7 @@ lcl_class->sub(
 ```
 Vererbung einer Klasse
 
-## 2.4 Prozedurale Programmierung (Simon)
+## 2.4 Prozedurale Programmierung (TBD)
 
 -        **Einführung in die prozedurale Programmierung in ABAP**
 
